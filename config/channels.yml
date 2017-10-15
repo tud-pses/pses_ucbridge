@@ -1,38 +1,47 @@
 - ch_name: 'AX'
   datatype: 'int16_t'
   conversion_needed: True
+  # conversion factor (+/- 4g) (m/ss): 0.00119750976
   conversion_factor: 0.00119750976
 
 - ch_name: 'AY'
   datatype: 'int16_t'
   conversion_needed: True
+  # conversion factor (+/- 4g) (m/ss): 0.00119750976
   conversion_factor: 0.00119750976
 
 - ch_name: 'AZ'
   datatype: 'int16_t'
   conversion_needed: True
+  # conversion factor (+/- 4g) (m/ss): 0.00119750976
   conversion_factor: 0.00119750976
 
 - ch_name: 'GX'
   datatype: 'int16_t'
   conversion_needed: True
-  # conversion factor (deg/s): 0.06097560975
-  # conversion factor (rad/s): 0.00106422515
-  conversion_factor: 0.00106422515
+  # conversion factor (+/- 250 Range) (deg/s): 0.00763358778
+  # conversion factor (+/- 250 Range) (rad/s): 0.00013323124
+  # conversion factor (+/- 500 Range) (deg/s): 0.01526717557
+  # conversion factor (+/- 500 Range) (rad/s): 0.00026646248
+  conversion_factor: 0.00026646248
 
 - ch_name: 'GY'
   datatype: 'int16_t'
   conversion_needed: True
-  # conversion factor (deg/s): 0.06097560975
-  # conversion factor (rad/s): 0.00106422515
-  conversion_factor: 0.00106422515
+  # conversion factor (+/- 250 Range) (deg/s): 0.00763358778
+  # conversion factor (+/- 250 Range) (rad/s): 0.00013323124
+  # conversion factor (+/- 500 Range) (deg/s): 0.01526717557
+  # conversion factor (+/- 500 Range) (rad/s): 0.00026646248
+  conversion_factor: 0.00026646248
 
 - ch_name: 'GZ'
   datatype: 'int16_t'
   conversion_needed: True
-  # conversion factor (deg/s): 0.06097560975
-  # conversion factor (rad/s): 0.00106422515
-  conversion_factor: 0.00106422515
+  # conversion factor (+/- 250 Range) (deg/s): 0.00763358778
+  # conversion factor (+/- 250 Range) (rad/s): 0.00013323124
+  # conversion factor (+/- 500 Range) (deg/s): 0.01526717557
+  # conversion factor (+/- 500 Range) (rad/s): 0.00026646248
+  conversion_factor: 0.00026646248
 
 - ch_name: 'HALL_CNT'
   datatype: 'uint8_t'
