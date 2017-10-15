@@ -129,6 +129,7 @@ void SensorGroup::parseResponse(const std::string& response)
         valueError("Group: " + std::to_string(grpNumber) + " ch.: " +
                    channelList[splitIndex]->chName +
                    " had a faulty value!\n Error Code: " + s);
+        channelValues.setParameterValueAsString(channelList[splitIndex]->chName, "0", false);
       }
       else
       {
@@ -174,6 +175,7 @@ void SensorGroup::parseResponse(const std::string& response)
           valueError("Group: " + std::to_string(grpNumber) + " ch.: " + chName +
                      " had a faulty value!\n Error Code: " +
                      std::to_string(tempValue));
+          channelValues.setParameterValueAsString(channelList[i]->chName, "0", false);
         }
       }
       std::string val = std::to_string(tempValue);
@@ -217,6 +219,10 @@ const bool SensorGroup::getChannelValueConverted(const std::string& name,
 {
   if (!channelValues.isParamInMap(name))
     return false;
+  if (!channelValues.getParameter(name)->isValid()){
+    out = std::numeric_limits<double>::quiet_NaN();
+    return true;
+  }
   const std::string& type = channelValues.getParameter(name)->getType();
   int size = channelValues.getParameter(name)->getTypeByteSize();
   if (type.compare("int8_t") == 0)

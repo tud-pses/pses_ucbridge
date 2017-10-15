@@ -16,6 +16,7 @@ public:
   Parameter(const std::string& name, const std::string& type)
       : name(name), type(type)
   {
+    isParamValid = true;
   }
   virtual ~Parameter() {}
   const std::string& getName() const { return name; }
@@ -23,10 +24,13 @@ public:
   virtual const int getTypeByteSize() const = 0;
   virtual const bool isTypeSigned() const = 0;
   virtual const bool isTypeArithmetic() const = 0;
+  void setValid(const bool isParamValid) { this->isParamValid = isParamValid; }
+  const bool isValid() const {return isParamValid; }
 
 private:
   std::string name;
   std::string type;
+  bool isParamValid;
 };
 
 template <typename T> class GenericParameter : public Parameter
@@ -74,10 +78,11 @@ public:
 
   template <typename T>
   void insertParameter(const std::string& name, const std::string& type,
-                       const T& value)
+                       const T& value, const bool isValid = true)
   {
     std::shared_ptr<Parameter> param =
         std::shared_ptr<Parameter>(new GenericParameter<T>(name, type));
+    param->setValid(isValid);
     std::dynamic_pointer_cast<GenericParameter<T>>(param)->setData(value);
     parameters.insert(std::make_pair(name, param));
   }
@@ -209,14 +214,16 @@ public:
     else if (type.compare("string_t") == 0)
     {
       // wie string type mismatch bestimmen ?
-      if(isArithmetic) throw std::invalid_argument("Parameter typename \"" + type +
-                                                  "\" doesn't match given variable type!");
+      if (isArithmetic)
+        throw std::invalid_argument("Parameter typename \"" + type +
+                                    "\" doesn't match given variable type!");
       getParameterValue(name, out);
     }
     else if (type.compare("string_t[]") == 0)
     {
-      if(isArithmetic) throw std::invalid_argument("Parameter typename \"" + type +
-                                                  "\" doesn't match given variable type!");
+      if (isArithmetic)
+        throw std::invalid_argument("Parameter typename \"" + type +
+                                    "\" doesn't match given variable type!");
       // wie string type mismatch bestimmen ?
       std::vector<std::string> sArray;
       getParameterValue(name, sArray);
@@ -235,10 +242,15 @@ public:
   }
 
   void setParameterValueAsString(const std::string& name,
-                                 const std::string& input)
+                                 const std::string& input,
+                                 const bool isValid = true)
   {
     if (parameters.find(name) == parameters.end())
       throw std::out_of_range("Key: \"" + name + "\" not in Map!");
+    parameters[name]->setValid(isValid);
+    if(!isValid){
+      return;
+    }
     const std::string& type = parameters.at(name)->getType();
     int size = getParameter(name)->getTypeByteSize();
     bool isSigned = getParameter(name)->isTypeSigned();
@@ -359,7 +371,7 @@ public:
     }
   }
 
-  void insertParameter(const std::string& name, const std::string& type)
+  void insertParameter(const std::string& name, const std::string& type, const bool isValid = true)
   {
     std::shared_ptr<Parameter> param;
 
@@ -457,6 +469,7 @@ public:
       throw std::invalid_argument("Parameter typename \"" + type +
                                   "\" is an unsupported type!");
     }
+    param->setValid(isValid);
 
     parameters.insert(std::make_pair(name, param));
   }
