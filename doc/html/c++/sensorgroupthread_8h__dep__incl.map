@@ -1,0 +1,12 @@
+<map id="sensorgroupthread.h" name="sensorgroupthread.h">
+<area shape="rect" id="node2" href="$threaddispatcher_8h.html" title="threaddispatcher.h" alt="" coords="199,80,329,107"/>
+<area shape="rect" id="node11" href="$sensorgroupthread_8cpp.html" title="sensorgroupthread.cpp" alt="" coords="352,80,507,107"/>
+<area shape="rect" id="node3" href="$communication_8h.html" title="communication.h" alt="" coords="110,229,231,256"/>
+<area shape="rect" id="node8" href="$readingthread_8h.html" title="readingthread.h" alt="" coords="209,155,319,181"/>
+<area shape="rect" id="node10" href="$threaddispatcher_8cpp.html" title="threaddispatcher.cpp" alt="" coords="343,155,486,181"/>
+<area shape="rect" id="node4" href="$servicefunctions_8h.html" title="servicefunctions.h" alt="" coords="5,304,133,331"/>
+<area shape="rect" id="node5" href="$uc__bridge_8h.html" title="uc_bridge.h" alt="" coords="75,379,165,405"/>
+<area shape="rect" id="node7" href="$communication_8cpp.html" title="communication.cpp" alt="" coords="209,304,343,331"/>
+<area shape="rect" id="node6" href="$uc__bridge_8cpp.html" title="uc_bridge.cpp" alt="" coords="69,453,171,480"/>
+<area shape="rect" id="node9" href="$readingthread_8cpp.html" title="readingthread.cpp" alt="" coords="256,229,381,256"/>
+</map>

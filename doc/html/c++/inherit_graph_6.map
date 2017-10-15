@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classCommunicationThread.html" title="CommunicationThread" alt="" coords="5,56,159,83"/>
+<area shape="rect" id="node2" href="$classReadingThread.html" title="ReadingThread" alt="" coords="221,5,331,32"/>
+<area shape="rect" id="node3" href="$classSensorGroupThread.html" title="SensorGroupThread" alt="" coords="207,56,345,83"/>
+<area shape="rect" id="node4" href="$classThreadDispatcher.html" title="ThreadDispatcher" alt="" coords="213,107,339,133"/>
+</map>

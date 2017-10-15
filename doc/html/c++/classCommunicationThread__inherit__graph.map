@@ -1,0 +1,5 @@
+<map id="CommunicationThread" name="CommunicationThread">
+<area shape="rect" id="node2" href="$classReadingThread.html" title="ReadingThread" alt="" coords="5,80,116,107"/>
+<area shape="rect" id="node3" href="$classSensorGroupThread.html" title="SensorGroupThread" alt="" coords="141,80,279,107"/>
+<area shape="rect" id="node4" href="$classThreadDispatcher.html" title="ThreadDispatcher" alt="" coords="303,80,429,107"/>
+</map>

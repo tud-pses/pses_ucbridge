@@ -1,0 +1,12 @@
+<map id="sensorgroupthread.h" name="sensorgroupthread.h">
+<area shape="rect" id="node4" href="$communicationthread_8h.html" title="pses_ucbridge/communicationthread.h" alt="" coords="1564,229,1809,256"/>
+<area shape="rect" id="node8" href="$threaddispatcher_8h.html" title="pses_ucbridge/threaddispatcher.h" alt="" coords="1165,80,1382,107"/>
+<area shape="rect" id="node26" href="$sensorgroup_8h.html" title="pses_ucbridge/sensorgroup.h" alt="" coords="648,304,840,331"/>
+<area shape="rect" id="node9" href="$serialinterface_8h.html" title="pses_ucbridge/serialinterface.h" alt="" coords="269,155,472,181"/>
+<area shape="rect" id="node14" href="$readingthread_8h.html" title="pses_ucbridge/readingthread.h" alt="" coords="1174,155,1373,181"/>
+<area shape="rect" id="node15" href="$communicationconfig_8h.html" title="pses_ucbridge/communicationconfig.h" alt="" coords="901,229,1145,256"/>
+<area shape="rect" id="node16" href="$command_8h.html" title="pses_ucbridge/command.h" alt="" coords="1000,379,1179,405"/>
+<area shape="rect" id="node27" href="$syntax_8h.html" title="pses_ucbridge/syntax.h" alt="" coords="715,379,875,405"/>
+<area shape="rect" id="node21" href="$parameter_8h.html" title="pses_ucbridge/parameter.h" alt="" coords="1007,461,1185,487"/>
+<area shape="rect" id="node28" href="$base64Decoder_8h.html" title="pses_ucbridge/base64Decoder.h" alt="" coords="378,379,590,405"/>
+</map>
