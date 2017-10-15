@@ -41,7 +41,7 @@ int main(int argc, char** argv)
       nh.advertise<std_msgs::UInt8>("/uc_bridge/hall_cnt", 10);
   ros::Publisher grp32 =
       nh.advertise<std_msgs::Float64>("/uc_bridge/hall_dt", 10);
-  ros::Publisher grp33 =
+  ros::Publisher grp6 =
       nh.advertise<std_msgs::Float64>("/uc_bridge/hall_dt8", 10);
   ros::Publisher grp4 =
       nh.advertise<sensor_msgs::MagneticField>("/uc_bridge/mag", 10);
@@ -55,16 +55,17 @@ int main(int argc, char** argv)
   // group publish services by putting them into a map
   std::unordered_map<std::string, ros::Publisher*> usGrp;
   std::unordered_map<std::string, ros::Publisher*> imuGrp;
-  std::unordered_map<std::string, ros::Publisher*> hallGrp;
+  std::unordered_map<std::string, ros::Publisher*> hallcntDtGrp;
+  std::unordered_map<std::string, ros::Publisher*> hallDt8Grp;
   std::unordered_map<std::string, ros::Publisher*> magGrp;
   std::unordered_map<std::string, ros::Publisher*> batGrp;
   usGrp.insert(std::make_pair("USL", &grp11));
   usGrp.insert(std::make_pair("USF", &grp12));
   usGrp.insert(std::make_pair("USR", &grp13));
   imuGrp.insert(std::make_pair("IMU", &grp2));
-  hallGrp.insert(std::make_pair("HALL_CNT", &grp31));
-  hallGrp.insert(std::make_pair("HALL_DT", &grp32));
-  hallGrp.insert(std::make_pair("HALL_DT8", &grp33));
+  hallcntDtGrp.insert(std::make_pair("HALL_CNT", &grp31));
+  hallcntDtGrp.insert(std::make_pair("HALL_DT", &grp32));
+  hallDt8Grp.insert(std::make_pair("HALL_DT8", &grp6));
   magGrp.insert(std::make_pair("MAG", &grp4));
   batGrp.insert(std::make_pair("VDBAT", &grp51));
   batGrp.insert(std::make_pair("VSBAT", &grp52));
@@ -77,11 +78,13 @@ int main(int argc, char** argv)
     com.registerSensorGroupCallback(
         2, boost::bind(&uc_bridge::publishSensorGroupMessage2, _1, imuGrp));
     com.registerSensorGroupCallback(
-        3, boost::bind(&uc_bridge::publishSensorGroupMessage3, _1, hallGrp));
+        3, boost::bind(&uc_bridge::publishSensorGroupMessage3, _1, hallcntDtGrp));
     com.registerSensorGroupCallback(
         4, boost::bind(&uc_bridge::publishSensorGroupMessage4, _1, magGrp));
     com.registerSensorGroupCallback(
         5, boost::bind(&uc_bridge::publishSensorGroupMessage5, _1, batGrp));
+    com.registerSensorGroupCallback(
+        6, boost::bind(&uc_bridge::publishSensorGroupMessage6, _1, hallDt8Grp));
   }
   // debug special modes
   if (debugMsgOn)

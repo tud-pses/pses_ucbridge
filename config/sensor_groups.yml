@@ -15,9 +15,15 @@
   encoding: "ASCII"
 
 - grp_nr: 3
-  name: "Hall Sensor"
-  channels: ['HALL_CNT', 'HALL_DT', 'HALL_DT8']
-  options: ['Wait_For_All:10', 'Encoding:ASCII']
+  name: "Hall Sensor Cnt/Dt"
+  channels: ['HALL_CNT', 'HALL_DT']
+  options: ['Encoding:ASCII']
+  encoding: "ASCII"
+
+- grp_nr: 6
+  name: "Hall Sensor Dt8"
+  channels: ['HALL_DT8']
+  options: ['Encoding:ASCII']
   encoding: "ASCII"
 
 - grp_nr: 4
