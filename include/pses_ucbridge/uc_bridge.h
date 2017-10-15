@@ -259,10 +259,8 @@ void publishSensorGroupMessage3(
   {
     grp->getChannelValue("HALL_CNT", hallcnt.data);
     grp->getChannelValueConverted("HALL_DT", halldt.data);
-    grp->getChannelValueConverted("HALL_DT8", halldt8.data);
     pub["HALL_CNT"]->publish(hallcnt);
     pub["HALL_DT"]->publish(halldt);
-    pub["HALL_DT8"]->publish(halldt8);
   }
   catch (std::exception& e)
   {
@@ -314,6 +312,23 @@ void publishSensorGroupMessage5(
   catch (std::exception& e)
   {
     ROS_WARN_STREAM("An error in Message 'Sensor grp5' occured!\n Description: "
+                    << e.what());
+  }
+}
+
+void publishSensorGroupMessage6(
+    SensorGroup* grp, std::unordered_map<std::string, ros::Publisher*>& pub)
+{
+  std_msgs::UInt8 hallcnt;
+  std_msgs::Float64 halldt, halldt8;
+  try
+  {
+    grp->getChannelValueConverted("HALL_DT8", halldt8.data);
+    pub["HALL_DT8"]->publish(halldt8);
+  }
+  catch (std::exception& e)
+  {
+    ROS_WARN_STREAM("An error in Message 'Sensor grp6' occured!\n Description: "
                     << e.what());
   }
 }

@@ -16,17 +16,23 @@
 - ch_name: 'GX'
   datatype: 'int16_t'
   conversion_needed: True
-  conversion_factor: 0.06097560975
+  # conversion factor (deg/s): 0.06097560975
+  # conversion factor (rad/s): 0.00106422515
+  conversion_factor: 0.00106422515
 
 - ch_name: 'GY'
   datatype: 'int16_t'
   conversion_needed: True
-  conversion_factor: 0.06097560975
+  # conversion factor (deg/s): 0.06097560975
+  # conversion factor (rad/s): 0.00106422515
+  conversion_factor: 0.00106422515
 
 - ch_name: 'GZ'
   datatype: 'int16_t'
   conversion_needed: True
-  conversion_factor: 0.06097560975
+  # conversion factor (deg/s): 0.06097560975
+  # conversion factor (rad/s): 0.00106422515
+  conversion_factor: 0.00106422515
 
 - ch_name: 'HALL_CNT'
   datatype: 'uint8_t'
