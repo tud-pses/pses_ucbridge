@@ -9,6 +9,6 @@
     <param name="activate_daq" value="true" />
     <param name="reset_on_shutdown" value="true" />
     <param name="enable_debug_messages" value="false" />
-    <param name="enable_raw_communiction" value="false" />
+    <param name="enable_raw_communication" value="false" />
   </node>
 </launch>
