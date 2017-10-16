@@ -1,10 +1,6 @@
 # PSES UcBridge
 
-This package provides a high level communication inferface to a microcontroller connected via UART and is fully integrated within ROS.
-
-## Getting Started
-
-ToDo..
+This package provides a communication inferface to a microcontroller connected through a serial connection and is fully integrated within ROS.
 
 ### Prerequisites
 
@@ -14,6 +10,11 @@ dependent on other ROS packages.
 ### Installing
 
 ToDo..
+
+## Getting Started
+
+Please feel free to browse our wiki, where you will find instruction on how to use and configure this package.
+[Pses_ucbridge Wiki](https://github.com/tud-pses/pses_ucbridge/wiki)
 
 ## Authors
 
