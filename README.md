@@ -23,9 +23,13 @@ Build the package with catkin_make:
 
 ## Getting Started
 
-Please feel free to browse our wiki, where you will find instruction on how to use and configure this package.
+Please feel free to browse our wiki, where you can find instructions on how to use and configure this package.
 
 [Pses_ucbridge Wiki](https://github.com/tud-pses/pses_ucbridge/wiki)
+
+If you're looking for a documentation on the code base, please follow this link:
+
+[C++ API](https://tud-pses.github.io/pses_ucbridge/)
 
 ## Authors
 
