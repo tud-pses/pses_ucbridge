@@ -18,7 +18,7 @@ int main(int argc, char** argv)
   nh.getParam("/uc_bridge/activate_daq", daqOn);
   nh.getParam("/uc_bridge/config_path", configPath);
   nh.getParam("/uc_bridge/enable_debug_messages", debugMsgOn);
-  nh.getParam("/uc_bridge/enable_raw_communiction", rawComOn);
+  nh.getParam("/uc_bridge/enable_raw_communication", rawComOn);
   if (rawComOn)
   {
     regSensorGrps = false;
