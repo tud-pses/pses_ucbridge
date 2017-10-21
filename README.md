@@ -1,6 +1,6 @@
 # PSES UcBridge
 
-This package provides a communication inferface to a microcontroller connected through a serial connection and is fully integrated within ROS.
+This ROS-package provides a communication inferface to a microcontroller connected through a serial connection and published sensor information from a microcontoller on topics.
 
 ### Prerequisites
 
