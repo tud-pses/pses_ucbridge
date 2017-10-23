@@ -1,5 +1,5 @@
 actions: []
-authors: ''
+authors: Sebastian Ehmes <sebastian.ehmes@gmx.de>
 brief: ''
 bugtracker: ''
 depends:
@@ -12,10 +12,10 @@ depends:
 - serial
 description: The pses_ucbridge package
 license: BSD
-maintainers: n <sebastian.ehmes@gmx.de>
+maintainers: Sebastian Ehmes <sebastian.ehmes@gmx.de>, Nicolas Acero <aceronicolas@hotmail.com>
 msgs: []
 package_type: package
-repo_url: ''
+repo_url: https://github.com/tud-pses/pses_ucbridge
 srvs:
 - ToggleDAQ
 - GetInfoGroup
