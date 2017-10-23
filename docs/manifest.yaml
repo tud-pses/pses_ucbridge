@@ -46,4 +46,4 @@ srvs:
 - ToggleKinect
 - DeleteGroup
 - GetUSInfo
-url: ''
+url: https://github.com/tud-pses/pses_ucbridge/wiki

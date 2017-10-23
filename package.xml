@@ -21,6 +21,9 @@
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
   <url type="repository">https://github.com/tud-pses/pses_ucbridge</url>
+  <url type="website">https://github.com/tud-pses/pses_ucbridge/wiki</url>
+  <url>https://github.com/tud-pses/pses_ucbridge</url>
+
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
