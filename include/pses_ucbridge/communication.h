@@ -1,3 +1,9 @@
+/**
+ * @file
+ * Header file for the Communication class.
+ *
+*/
+
 #ifndef COMMUNICATION_H
 #define COMMUNICATION_H
 
@@ -10,6 +16,13 @@
 #include <pses_ucbridge/parameter.h>
 #include <pses_ucbridge/command.h>
 
+/**
+ * @class Communication communication.h "pses_ucbridge/communication.h"
+ * @brief The Communication class provides access to microcontroller communication.
+ *
+ * blabla
+ *
+*/
 class Communication
 {
 public:

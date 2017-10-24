@@ -33,35 +33,48 @@
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="command_8h_source.html">command.h</a>&gt;</code></p>
+<p>The <a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> class builds the syntactic template for a specific command defined in a <a class="el" href="structCommandParams.html" title="The CommandParams struct serves as a data struct to configure Command objects. ">CommandParams</a> struct.  
+ <a href="classCommand.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="command_8h_source.html">pses_ucbridge/command.h</a>&quot;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a18df2d81039392daeb0b78c346a70537"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a18df2d81039392daeb0b78c346a70537">Command</a> ()</td></tr>
+<tr class="memdesc:a18df2d81039392daeb0b78c346a70537"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> object default constructor.  <a href="#a18df2d81039392daeb0b78c346a70537">More...</a><br /></td></tr>
 <tr class="separator:a18df2d81039392daeb0b78c346a70537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ee1d45c4e9caf8992f8ac677ca78f9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a7ee1d45c4e9caf8992f8ac677ca78f9f">Command</a> (const <a class="el" href="structCommandParams.html">CommandParams</a> &amp;cmdParams, const std::string &amp;<a class="el" href="classCommand.html#a5e797409d77b53c0f7127e0b06a7abc9">cmdResponsePrefix</a>, const std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="structCommandOptions.html">CommandOptions</a> &gt;&gt; &amp;<a class="el" href="classCommand.html#a73cbe94a6269dfbe3d5989a1a7811b77">options</a>, const std::string &amp;<a class="el" href="classCommand.html#ab63c37397b256a4b4345e15222851b08">optionsPrefix</a>)</td></tr>
+<tr class="memdesc:a7ee1d45c4e9caf8992f8ac677ca78f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> object constructor.  <a href="#a7ee1d45c4e9caf8992f8ac677ca78f9f">More...</a><br /></td></tr>
 <tr class="separator:a7ee1d45c4e9caf8992f8ac677ca78f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21d1e608426e4cd45339ce5b2ad41ad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a21d1e608426e4cd45339ce5b2ad41ad9">generateCommand</a> (const <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;inputParams, std::string &amp;out)</td></tr>
+<tr class="memdesc:a21d1e608426e4cd45339ce5b2ad41ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a command string from the internal template given all necessary parameter values.  <a href="#a21d1e608426e4cd45339ce5b2ad41ad9">More...</a><br /></td></tr>
 <tr class="separator:a21d1e608426e4cd45339ce5b2ad41ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac70336231b264534a2ddb2b14f438fb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ac70336231b264534a2ddb2b14f438fb8">generateCommand</a> (const <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;inputParams, const std::vector&lt; std::string &gt; &amp;<a class="el" href="classCommand.html#a73cbe94a6269dfbe3d5989a1a7811b77">options</a>, std::string &amp;out)</td></tr>
+<tr class="memdesc:ac70336231b264534a2ddb2b14f438fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a command string from the internal template given all necessary parameter values and options. This method is able to take an options list as an additional argument to modify its internal command template.  <a href="#ac70336231b264534a2ddb2b14f438fb8">More...</a><br /></td></tr>
 <tr class="separator:ac70336231b264534a2ddb2b14f438fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ab51f28f5b6a5242e92d02f6ad3d45c"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a3ab51f28f5b6a5242e92d02f6ad3d45c">getName</a> () const </td></tr>
+<tr class="memdesc:a3ab51f28f5b6a5242e92d02f6ad3d45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the unique name attribute.  <a href="#a3ab51f28f5b6a5242e92d02f6ad3d45c">More...</a><br /></td></tr>
 <tr class="separator:a3ab51f28f5b6a5242e92d02f6ad3d45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a977e07ae66ac53c327eea4a4573c6e80"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a977e07ae66ac53c327eea4a4573c6e80">verifyResponse</a> (const <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;inputParams, const std::string &amp;responseOrig, <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;outputParams)</td></tr>
+<tr class="memdesc:a977e07ae66ac53c327eea4a4573c6e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies a given response based on the internal template given all necessary input parameter values.  <a href="#a977e07ae66ac53c327eea4a4573c6e80">More...</a><br /></td></tr>
 <tr class="separator:a977e07ae66ac53c327eea4a4573c6e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bdaa30ea792866f50a975bc1efdecaf"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a0bdaa30ea792866f50a975bc1efdecaf">verifyResponse</a> (const <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;inputParams, const std::vector&lt; std::string &gt; &amp;<a class="el" href="classCommand.html#a73cbe94a6269dfbe3d5989a1a7811b77">options</a>, const std::string &amp;responseOrig, <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;outputParams)</td></tr>
+<tr class="memdesc:a0bdaa30ea792866f50a975bc1efdecaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies a given response based on the internal template given all necessary input parameter values and options. This method is able to take an options list as an additional argument to verify a modified command template.  <a href="#a0bdaa30ea792866f50a975bc1efdecaf">More...</a><br /></td></tr>
 <tr class="separator:a0bdaa30ea792866f50a975bc1efdecaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:a4ac95965575a83355e354e088ae320bd"><td class="memItemLeft" align="right" valign="top">typedef void(Command::*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a4ac95965575a83355e354e088ae320bd">insertInstruction</a>) (const int &amp;, const <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;, std::string &amp;out)</td></tr>
-<tr class="separator:a4ac95965575a83355e354e088ae320bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d3f5d7d622379ebf723d9c78866b027"><td class="memItemLeft" align="right" valign="top">typedef void(Command::*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a5d3f5d7d622379ebf723d9c78866b027">insertInstruction</a>) (const int &amp;, const <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;, std::string &amp;out)</td></tr>
+<tr class="memdesc:a5d3f5d7d622379ebf723d9c78866b027"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> template building function pointer type.  <a href="#a5d3f5d7d622379ebf723d9c78866b027">More...</a><br /></td></tr>
+<tr class="separator:a5d3f5d7d622379ebf723d9c78866b027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ac7e13d7d203a64079b6af769f598661b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ac7e13d7d203a64079b6af769f598661b">insertCmdKeyword</a> (const int &amp;index, const <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;input, std::string &amp;out)</td></tr>
+<tr class="memdesc:ac7e13d7d203a64079b6af769f598661b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> template building function for a keyword token.  <a href="#ac7e13d7d203a64079b6af769f598661b">More...</a><br /></td></tr>
 <tr class="separator:ac7e13d7d203a64079b6af769f598661b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ce40700cde46b0a7a8ae1f9671bbecf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a7ce40700cde46b0a7a8ae1f9671bbecf">insertCmdParameter</a> (const int &amp;index, const <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;input, std::string &amp;out)</td></tr>
+<tr class="memdesc:a7ce40700cde46b0a7a8ae1f9671bbecf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> template building function for a parameter token.  <a href="#a7ce40700cde46b0a7a8ae1f9671bbecf">More...</a><br /></td></tr>
 <tr class="separator:a7ce40700cde46b0a7a8ae1f9671bbecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -78,7 +91,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a1050be5f1d3c4654ff732b43c2935c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e797409d77b53c0f7127e0b06a7abc9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a5e797409d77b53c0f7127e0b06a7abc9">cmdResponsePrefix</a></td></tr>
 <tr class="separator:a5e797409d77b53c0f7127e0b06a7abc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9fed238ad4983805b84da20544ab899"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; int, <a class="el" href="classCommand.html#a4ac95965575a83355e354e088ae320bd">insertInstruction</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ab9fed238ad4983805b84da20544ab899">commandTemplate</a></td></tr>
+<tr class="memitem:ab9fed238ad4983805b84da20544ab899"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; int, <a class="el" href="classCommand.html#a5d3f5d7d622379ebf723d9c78866b027">insertInstruction</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#ab9fed238ad4983805b84da20544ab899">commandTemplate</a></td></tr>
 <tr class="separator:ab9fed238ad4983805b84da20544ab899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d66550a9895cbd96373a9a221fa2b25"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommand.html#a8d66550a9895cbd96373a9a221fa2b25">name</a></td></tr>
 <tr class="separator:a8d66550a9895cbd96373a9a221fa2b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -96,10 +109,13 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aad6539e76244213a95e9babeead13a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="command_8h_source.html#l00038">38</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<div class="textblock"><p>The <a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> class builds the syntactic template for a specific command defined in a <a class="el" href="structCommandParams.html" title="The CommandParams struct serves as a data struct to configure Command objects. ">CommandParams</a> struct. </p>
+<p>A <a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> object builds its command message given the required parameter values. It can also verfy if a given response is valid, given the input parameters of the previously sent command.</p>
+<p>If a non empty <a class="el" href="structCommandOptions.html" title="The CommandOptions struct serves as a data struct to inform command objects about all modifiers that ...">CommandOptions</a> list was given on initilization, a command object can change its command template based on required options. </p>
+
+<p>Definition at line <a class="el" href="command_8h_source.html#l00089">89</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="a4ac95965575a83355e354e088ae320bd"></a>
+<a class="anchor" id="a5d3f5d7d622379ebf723d9c78866b027"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -107,7 +123,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(Command::* Command::insertInstruction) (const int &amp;, const <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;, std::string &amp;out)</td>
+          <td class="memname">void(Command::* Command::insertInstruction)(const int &amp;, const <a class="el" href="classParameter_1_1ParameterMap.html">Parameter::ParameterMap</a> &amp;, std::string &amp;out)</td>
         </tr>
       </table>
   </td>
@@ -117,7 +133,17 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00040">40</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> template building function pointer type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>Index of the token in a cmdToken list. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to a ParameterMap object. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Output string, containing the requested token. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="command_8h_source.html#l00100">100</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -134,6 +160,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> object default constructor. </p>
 
 <p>Definition at line <a class="el" href="command_8cpp_source.html#l00003">3</a> of file <a class="el" href="command_8cpp_source.html">command.cpp</a>.</p>
 
@@ -175,6 +203,23 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> object constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmdParams</td><td><a class="el" href="structCommandParams.html" title="The CommandParams struct serves as a data struct to configure Command objects. ">CommandParams</a> struct that is used to configure a <a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmdResponsePrefix</td><td>Marks the beginning of a response. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Map of possible options, that may modify this command. (first: name, second: <a class="el" href="structCommandOptions.html" title="The CommandOptions struct serves as a data struct to inform command objects about all modifiers that ...">CommandOptions</a>) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">optionsPrefix</td><td>Marks the appearance of an option within a command template. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="command_8cpp_source.html#l00005">5</a> of file <a class="el" href="command_8cpp_source.html">command.cpp</a>.</p>
 
 </div>
@@ -203,6 +248,21 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Generates a command string from the internal template given all necessary parameter values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputParams</td><td>Input parameter map, containing all necessary parameter values and types to create a command. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Generated command string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="command_8cpp_source.html#l00085">85</a> of file <a class="el" href="command_8cpp_source.html">command.cpp</a>.</p>
 
@@ -238,6 +298,22 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Generates a command string from the internal template given all necessary parameter values and options. This method is able to take an options list as an additional argument to modify its internal command template. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputParams</td><td>Input parameter map, containing all necessary parameter values and types to create a command, including parameter values required by given options. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>List of options, to be applied to a command. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Generated command string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="command_8cpp_source.html#l00099">99</a> of file <a class="el" href="command_8cpp_source.html">command.cpp</a>.</p>
 
 </div>
@@ -254,6 +330,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Getter for the unique name attribute. </p>
+<dl class="section return"><dt>Returns</dt><dd>name attribute value </dd></dl>
 
 <p>Definition at line <a class="el" href="command_8cpp_source.html#l00370">370</a> of file <a class="el" href="command_8cpp_source.html">command.cpp</a>.</p>
 
@@ -297,6 +376,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> template building function for a keyword token. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>Index of the keyword in the cmdKeyWords list. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to a ParameterMap object, unused in this function. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Output string, containing the keyword. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="command_8cpp_source.html#l00372">372</a> of file <a class="el" href="command_8cpp_source.html">command.cpp</a>.</p>
 
 </div>
@@ -339,6 +428,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> template building function for a parameter token. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>Index of the parameter in the cmdParameter list. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>Pointer to a ParameterMap object, used to get the required parameter value. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Output string, containing the parameter value as string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="command_8cpp_source.html#l00383">383</a> of file <a class="el" href="command_8cpp_source.html">command.cpp</a>.</p>
 
 </div>
@@ -372,6 +471,23 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verifies a given response based on the internal template given all necessary input parameter values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputParams</td><td>Input parameter map, containing all necessary parameter values and types to verify a response. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">responseOrig</td><td>Response on command to be verified. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">outputParams</td><td>If the command requested returned parameters, those will be put here. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if response is valid, else false. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="command_8cpp_source.html#l00131">131</a> of file <a class="el" href="command_8cpp_source.html">command.cpp</a>.</p>
 
@@ -413,6 +529,24 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Verifies a given response based on the internal template given all necessary input parameter values and options. This method is able to take an options list as an additional argument to verify a modified command template. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputParams</td><td>Input parameter map, containing all necessary parameter values and types to verify a response, including parameter values required by given options. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>List of options, which have been applied to a command. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">responseOrig</td><td>Response on command to be verified. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">outputParams</td><td>If the command or command options requested returned parameters, those will be put here. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if response is valid, else false. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Definition at line <a class="el" href="command_8cpp_source.html#l00205">205</a> of file <a class="el" href="command_8cpp_source.html">command.cpp</a>.</p>
 
 </div>
@@ -435,8 +569,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Does this <a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> have dynamic parameters? </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00065">65</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00192">192</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -457,8 +592,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Does this <a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> trigger a response? </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00066">66</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00193">193</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -479,8 +615,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>List of command key words, ordered by appearance in the template.) </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00075">75</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00210">210</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -501,8 +638,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>List of command parameters, ordered by appearance in the template.) </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00076">76</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00212">212</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -523,8 +661,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set of possible command parameters) </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00074">74</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00208">208</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -545,8 +684,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This prefix marks the beginning of a response.) </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00073">73</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00206">206</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -558,7 +698,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::pair&lt;int, <a class="el" href="classCommand.html#a4ac95965575a83355e354e088ae320bd">insertInstruction</a>&gt; &gt; Command::commandTemplate</td>
+          <td class="memname">std::vector&lt;std::pair&lt;int, <a class="el" href="classCommand.html#a5d3f5d7d622379ebf723d9c78866b027">insertInstruction</a>&gt; &gt; Command::commandTemplate</td>
         </tr>
       </table>
   </td>
@@ -567,8 +707,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> building template (first: appearance index, second: building function)) </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00077">77</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00216">216</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -589,8 +730,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Unique identifier of a <a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> object. </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00064">64</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00191">191</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -611,8 +753,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Map of possible options, that may modify this command. (first: name, second: <a class="el" href="structCommandOptions.html" title="The CommandOptions struct serves as a data struct to inform command objects about all modifiers that ...">CommandOptions</a>) </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00068">68</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00195">195</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -633,8 +776,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This prefix marks the appearance of an option within a command template.) </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00069">69</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00198">198</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -655,8 +799,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Map of possible parameters, that may appear in this command. (first: name, second: type) </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00071">71</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00201">201</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -677,8 +822,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Does the response have dynamic parameters? </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00067">67</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00194">194</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -699,8 +845,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Response validation template: first: contains a keyWord if second:=false, else first contains paramName </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00081">81</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00224">224</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -721,8 +868,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Static part of the response. </p>
 
-<p>Definition at line <a class="el" href="command_8h_source.html#l00079">79</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
+<p>Definition at line <a class="el" href="command_8h_source.html#l00221">221</a> of file <a class="el" href="command_8h_source.html">command.h</a>.</p>
 
 </div>
 </div>
@@ -736,7 +884,7 @@ Private Attributes</h2></td></tr>
 <hr size="1"><div style="align: right;">
 <a href="https://github.com/tud-pses/pses_ucbridge">pses_ucbridge</a><br />
 Author(s): Sebastian Ehmes <sebastian.ehmes@gmx.de></br />
-<small>autogenerated on Mon Oct 23 2017 21:58:55</small>
+<small>autogenerated on Tue Oct 24 2017 21:01:46</small>
 </div>
 </body>
 </html>
