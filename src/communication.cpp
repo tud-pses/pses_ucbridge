@@ -1,3 +1,9 @@
+/**
+ * @file "communication.cpp"
+ * @brief Implementaion of the Communication class.
+ *
+*/
+
 #include <pses_ucbridge/communication.h>
 
 Communication::Communication(const std::string& configPath)

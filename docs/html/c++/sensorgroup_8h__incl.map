@@ -1,6 +1,6 @@
 <map id="sensorgroup.h" name="sensorgroup.h">
-<area shape="rect" id="node4" href="$parameter_8h.html" title="pses_ucbridge/parameter.h" alt="" coords="771,162,949,189"/>
-<area shape="rect" id="node9" href="$command_8h.html" title="pses_ucbridge/command.h" alt="" coords="568,80,747,107"/>
-<area shape="rect" id="node13" href="$syntax_8h.html" title="pses_ucbridge/syntax.h" alt="" coords="319,80,479,107"/>
-<area shape="rect" id="node14" href="$base64Decoder_8h.html" title="pses_ucbridge/base64Decoder.h" alt="" coords="33,80,245,107"/>
+<area shape="rect" id="node4" href="$parameter_8h.html" title="Header file for the Parameter::Parameter, Parameter::GenericParameter and Parameter::ParameterMap cla..." alt="" coords="771,162,949,189"/>
+<area shape="rect" id="node9" href="$command_8h.html" title="Header file for the Command class. " alt="" coords="568,80,747,107"/>
+<area shape="rect" id="node13" href="$syntax_8h.html" title="Header file for the Syntax struct. " alt="" coords="319,80,479,107"/>
+<area shape="rect" id="node14" href="$base64Decoder_8h.html" title="This library provides functions to convert a base64 encoded value to 32bit signed/unsigned integer..." alt="" coords="33,80,245,107"/>
 </map>

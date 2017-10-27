@@ -1,3 +1,9 @@
+/**
+ * @file "pses_ucbridge/uc_bridge.h"
+ * @brief Header file for the uc_bridge node.
+ *
+*/
+
 #ifndef UC_BRIDGE_H
 #define UC_BRIDGE_H
 
@@ -16,11 +22,23 @@
 #include <sensor_msgs/MagneticField.h>
 #include <sensor_msgs/BatteryState.h>
 
+/**
+ * @namespace uc_bridge
+ * @brief This namespace contains functions used in the uc_bridge node.
+ *
+ * Functions in this namespace are setup/calibration functions,
+ * sensor group callbacks and ros topic callbacks.
+ *
+*/
 namespace uc_bridge
 {
-Communication* com_ptr;
-bool rstOnShutdown;
+Communication* com_ptr; /**< Pointer to a Communication object. */
+bool rstOnShutdown; /**< Should the serial device be reset before shutdown? */
 
+/**
+ * @brief This function send a soft reset command to the serial device.
+ * @param[in] com Pointer to a Communication object.
+*/
 void resetController(Communication* com)
 {
   std::string cmd = "Reset Controller";
@@ -36,10 +54,17 @@ void resetController(Communication* com)
         "An error occured during initial Reset!\n Description: " << e.what());
   }
 }
-
+/**
+ * @brief This function is the callback for the shutdown system signal.
+ *
+ * If the OS catches a shutdown system signal (e.g. ctrl+x in command line)
+ * this function will be called and shut down the serial connection.
+ * @param[in] sig shutdown signal
+*/
 void shutdownSignalHandler(int sig)
 {
-  if(rstOnShutdown){
+  if (rstOnShutdown)
+  {
     resetController(com_ptr);
     ros::Duration(0.1).sleep();
   }
@@ -56,7 +81,11 @@ void shutdownSignalHandler(int sig)
   }
   ros::shutdown();
 }
-
+/**
+ * @brief This function will trigger the registration of all predefined sensor
+ * groups on the serial device.
+ * @param[in] com Pointer to a Communication object.
+*/
 void registerSensorGroups(Communication* com)
 {
   // register sensor groups
@@ -72,7 +101,10 @@ void registerSensorGroups(Communication* com)
                     << e.what());
   }
 }
-
+/**
+ * @brief This function will activate the motor controller of the serial device.
+ * @param[in] com Pointer to a Communication object.
+*/
 void activateMotorController(Communication* com)
 {
   bool was_set = false;
@@ -94,7 +126,11 @@ void activateMotorController(Communication* com)
                     << e.what());
   }
 }
-
+/**
+ * @brief This function will activate the steering controller of the serial
+ * device.
+ * @param[in] com Pointer to a Communication object.
+*/
 void activateSteeringController(Communication* com)
 {
   bool was_set = false;
@@ -116,7 +152,11 @@ void activateSteeringController(Communication* com)
                     << e.what());
   }
 }
-
+/**
+ * @brief This function will activate the kinect power supply of the serial
+ * device.
+ * @param[in] com Pointer to a Communication object.
+*/
 void activateKinect(Communication* com)
 {
   bool was_set = false;
@@ -136,7 +176,11 @@ void activateKinect(Communication* com)
         << e.what());
   }
 }
-
+/**
+ * @brief This function will activate the ultra sonic range sensors of the
+ * serial device.
+ * @param[in] com Pointer to a Communication object.
+*/
 void activateUS(Communication* com)
 {
   bool was_set = false;
@@ -156,7 +200,10 @@ void activateUS(Communication* com)
         << e.what());
   }
 }
-
+/**
+ * @brief This function will activate the daq of the serial device.
+ * @param[in] com Pointer to a Communication object.
+*/
 void activateDAQ(Communication* com)
 {
   bool was_set = false;
@@ -178,6 +225,14 @@ void activateDAQ(Communication* com)
 }
 
 // sensor group callbacks
+/**
+ * @brief This function will be called whenever a message from sensor group 1
+ * has been received and publish the sensor data on ros topcis.
+ *
+ * Sensor group 1 contains all ultra sonic range sensor readings.
+ * @param[in] grp Pointer to SensorGroup 1 object
+ * @param[in] map of ros::Publisher objects.
+*/
 void publishSensorGroupMessage1(
     SensorGroup* grp, std::unordered_map<std::string, ros::Publisher*>& pub)
 {
@@ -224,7 +279,14 @@ void publishSensorGroupMessage1(
                     << e.what());
   }
 }
-
+/**
+ * @brief This function will be called whenever a message from sensor group 2
+ * has been received and publish the sensor data on ros topcis.
+ *
+ * Sensor group 2 contains all IMU sensor readings.
+ * @param[in] grp Pointer to SensorGroup 2 object
+ * @param[in] map of ros::Publisher objects.
+*/
 void publishSensorGroupMessage2(
     SensorGroup* grp, std::unordered_map<std::string, ros::Publisher*>& pub)
 {
@@ -249,7 +311,14 @@ void publishSensorGroupMessage2(
                     << e.what());
   }
 }
-
+/**
+ * @brief This function will be called whenever a message from sensor group 3
+ * has been received and publish the sensor data on ros topcis.
+ *
+ * Sensor group 3 contains all hall sensor readings (makshift rotary encoder).
+ * @param[in] grp Pointer to SensorGroup 3 object
+ * @param[in] map of ros::Publisher objects.
+*/
 void publishSensorGroupMessage3(
     SensorGroup* grp, std::unordered_map<std::string, ros::Publisher*>& pub)
 {
@@ -268,12 +337,19 @@ void publishSensorGroupMessage3(
                     << e.what());
   }
 }
-
+/**
+ * @brief This function will be called whenever a message from sensor group 4
+ * has been received and publish the sensor data on ros topcis.
+ *
+ * Sensor group 4 contains all magnetic field sensor readings.
+ * @param[in] grp Pointer to SensorGroup 4 object
+ * @param[in] map of ros::Publisher objects.
+*/
 void publishSensorGroupMessage4(
     SensorGroup* grp, std::unordered_map<std::string, ros::Publisher*>& pub)
 {
   sensor_msgs::MagneticField mag;
-  //short mx, my, mz;
+  // short mx, my, mz;
   ros::Time t = ros::Time::now();
   try
   {
@@ -290,7 +366,14 @@ void publishSensorGroupMessage4(
                     << e.what());
   }
 }
-
+/**
+ * @brief This function will be called whenever a message from sensor group 5
+ * has been received and publish the sensor data on ros topcis.
+ *
+ * Sensor group 5 contains all battery readings.
+ * @param[in] grp Pointer to SensorGroup 5 object
+ * @param[in] map of ros::Publisher objects.
+*/
 void publishSensorGroupMessage5(
     SensorGroup* grp, std::unordered_map<std::string, ros::Publisher*>& pub)
 {
@@ -315,7 +398,14 @@ void publishSensorGroupMessage5(
                     << e.what());
   }
 }
-
+/**
+ * @brief This function will be called whenever a message from sensor group 6
+ * has been received and publish the sensor data on ros topcis.
+ *
+ * Sensor group 6 contains hall sensor readings for time between 8 impulses.
+ * @param[in] grp Pointer to SensorGroup 6 object
+ * @param[in] map of ros::Publisher objects.
+*/
 void publishSensorGroupMessage6(
     SensorGroup* grp, std::unordered_map<std::string, ros::Publisher*>& pub)
 {
@@ -334,20 +424,33 @@ void publishSensorGroupMessage6(
 }
 
 // debug/error/text callbacks
-void errorCallback(
-    const std::string& msg)
+/**
+ * @brief This function will be called whenever a communication error occured
+ * and post its content as a ROS Warning.
+ * @param[in] msg error message
+*/
+void errorCallback(const std::string& msg)
 {
-  ROS_WARN_STREAM("A communication Error occured!\n"<<msg);
+  ROS_WARN_STREAM("A communication Error occured!\n" << msg);
 }
-
-void textCallback(
-    const std::string& msg)
+/**
+ * @brief This function will be called whenever the communication received a
+ * plain text message which will be posted as ROS Info.
+ * @param[in] msg plain text message
+*/
+void textCallback(const std::string& msg)
 {
-  ROS_INFO_STREAM("UC board sent the following info:\n"<<msg);
+  ROS_INFO_STREAM("UC board sent the following info:\n" << msg);
 }
-
-void publishDebugMessage(
-    const std::string& msg, ros::Publisher* pub)
+/**
+ * @brief This function will be called whenever the communication received any
+ * message if the debug mode is enabled.
+ *
+ * The content of the debug message will be published on a ros topic.
+ * @param[in] msg plain debug message
+ * @param[out] pub ros::Publisher for the debug topic
+*/
+void publishDebugMessage(const std::string& msg, ros::Publisher* pub)
 {
   std_msgs::String debug;
   debug.data = msg;
@@ -355,7 +458,18 @@ void publishDebugMessage(
 }
 
 // ros command message callbacks
-void motorLevelCallback(std_msgs::Int16::ConstPtr motorLevel, Communication* com){
+/**
+ * @brief This function will be called whenever a ros node published a message
+ * on the motor level topic.
+ *
+ * The content of the motor level message determines what motor level will be set.
+ * This is an alternative way to ros services for controlling the robot.
+ * @param[in] motorLevel motor level message containing the motor level to be set.
+ * @param[in] com Pointer to a Communication object.
+*/
+void motorLevelCallback(std_msgs::Int16::ConstPtr motorLevel,
+                        Communication* com)
+{
   bool was_set = false;
   std::string cmd = "Drive Forward";
   short level = motorLevel->data;
@@ -367,36 +481,74 @@ void motorLevelCallback(std_msgs::Int16::ConstPtr motorLevel, Communication* com
   Parameter::ParameterMap input;
   Parameter::ParameterMap output;
   input.insertParameter("speed", "int16_t", level);
-  try{
+  try
+  {
     was_set = com->sendCommand(cmd, input, output);
-  }catch(std::exception& e){
-    ROS_WARN_STREAM("An error in Message 'set_motor_level_msg' occured!\n Description: "<<e.what());
+  }
+  catch (std::exception& e)
+  {
+    ROS_WARN_STREAM(
+        "An error in Message 'set_motor_level_msg' occured!\n Description: "
+        << e.what());
     was_set = false;
   }
-  if(!was_set) ROS_WARN_STREAM("Motor level set to: "<<motorLevel->data<<" failed!");
+  if (!was_set)
+    ROS_WARN_STREAM("Motor level set to: " << motorLevel->data << " failed!");
 }
-
-void steeringLevelCallback(std_msgs::Int16::ConstPtr steeringLevel, Communication* com){
+/**
+ * @brief This function will be called whenever a ros node published a message
+ * on the steering level topic.
+ *
+ * The content of the steering level message determines what motor level will be set.
+ * This is an alternative way to ros services for controlling the robot.
+ * @param[in] steeringLevel steering level message containing the steering level to be set.
+ * @param[in] com Pointer to a Communication object.
+*/
+void steeringLevelCallback(std_msgs::Int16::ConstPtr steeringLevel,
+                           Communication* com)
+{
   bool was_set = false;
   std::string cmd = "Set Steering Level";
   Parameter::ParameterMap input;
   Parameter::ParameterMap output;
   input.insertParameter("steering", "int16_t", steeringLevel->data);
-  try{
+  try
+  {
     was_set = com->sendCommand(cmd, input, output);
-  }catch(std::exception& e){
-    ROS_WARN_STREAM("An error in Message 'set_steering_level_msg' occured!\n Description: "<<e.what());
+  }
+  catch (std::exception& e)
+  {
+    ROS_WARN_STREAM(
+        "An error in Message 'set_steering_level_msg' occured!\n Description: "
+        << e.what());
     was_set = false;
   }
-  if(!was_set) ROS_WARN_STREAM("Steering level set to: "<<steeringLevel->data<<" failed!");
+  if (!was_set)
+    ROS_WARN_STREAM("Steering level set to: " << steeringLevel->data
+                                              << " failed!");
 }
 
 // debug raw message callback
-void ucBoardMessageCallback(std_msgs::String::ConstPtr msg, Communication* com){
-  try{
+/**
+ * @brief This function will be called whenever a ros node published a message
+ * on the raw communication topic.
+ *
+ * The content of the message will be transmitted directly to the serial device.
+ * This is meant as a direct way to communicate with the serial device for debugging purposes.
+ * @param[in] msg message to be transmitted
+ * @param[in] com Pointer to a Communication object.
+*/
+void ucBoardMessageCallback(std_msgs::String::ConstPtr msg, Communication* com)
+{
+  try
+  {
     com->sendRawMessage(msg->data);
-  }catch(std::exception& e){
-    ROS_WARN_STREAM("An error in Message 'send_uc_board_msg' occured!\n Description: "<<e.what());
+  }
+  catch (std::exception& e)
+  {
+    ROS_WARN_STREAM(
+        "An error in Message 'send_uc_board_msg' occured!\n Description: "
+        << e.what());
   }
 }
 }

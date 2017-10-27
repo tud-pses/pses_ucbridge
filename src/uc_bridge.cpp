@@ -1,3 +1,9 @@
+/**
+ * @file "uc_bridge.cpp"
+ * @brief uc_bridge node implementation, containing the main function.
+ *
+*/
+
 #include <pses_ucbridge/uc_bridge.h>
 
 int main(int argc, char** argv)

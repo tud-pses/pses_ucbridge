@@ -1,3 +1,9 @@
+/**
+ * @file "communicationconfig.cpp"
+ * @brief Implementaion of the CommunicationConfig class.
+ *
+*/
+
 #include <pses_ucbridge/communicationconfig.h>
 
 CommunicationConfig::CommunicationConfig() {}
@@ -31,23 +37,32 @@ void operator>>(const YAML::Node& node, Syntax& syntax)
   syntax.genErrorPrefix = node["gen_error_prefix"].as<std::string>();
   syntax.optionsPrefix = node["options_prefix"].as<std::string>();
   const YAML::Node& errorAsciiNode = node["grp_errors_ascii"];
-  if (errorAsciiNode.IsSequence() && errorAsciiNode.size() > 0){
-    for(auto item : errorAsciiNode){
+  if (errorAsciiNode.IsSequence() && errorAsciiNode.size() > 0)
+  {
+    for (auto item : errorAsciiNode)
+    {
       syntax.grpErrorsAscii.insert(item.as<std::string>());
     }
   }
   const YAML::Node& errorBinaryNode = node["grp_errors_binary"];
-  if (errorBinaryNode.IsSequence() && errorBinaryNode.size() > 0){
-    for(auto item : errorBinaryNode){
+  if (errorBinaryNode.IsSequence() && errorBinaryNode.size() > 0)
+  {
+    for (auto item : errorBinaryNode)
+    {
       int c = 0;
-      if (item.IsSequence() && item.size() > 0){
+      if (item.IsSequence() && item.size() > 0)
+      {
         std::string type;
         std::unordered_set<unsigned int> errorSet;
-        for(auto item2 : item){
-          if(c != 0){
+        for (auto item2 : item)
+        {
+          if (c != 0)
+          {
             errorSet.insert(item2.as<unsigned int>());
             c++;
-          }else{
+          }
+          else
+          {
             type = item2.as<std::string>();
             c++;
           }
@@ -56,7 +71,6 @@ void operator>>(const YAML::Node& node, Syntax& syntax)
       }
     }
   }
-
 }
 
 // SerialInferfaceConfig-struct assign operator
@@ -65,14 +79,15 @@ void operator>>(const YAML::Node& node, SerialInterfaceParams& serialParams)
   serialParams.baudRate = node["baudrate"].as<unsigned int>();
   serialParams.deviceTag = node["device_tag"].as<std::string>();
   serialParams.serialTimeout = node["serial_timeout"].as<unsigned int>();
-  serialParams.maxLineLength  = node["max_line_length"].as<unsigned int>();
+  serialParams.maxLineLength = node["max_line_length"].as<unsigned int>();
   serialParams.serialDevicesFolder =
       node["serial_devices_folder"].as<std::string>();
 }
 
 // Channel-struct assign operator
-void operator>>(const YAML::Node& node,
-                std::unordered_map<std::string, std::shared_ptr<Channel>>& channels)
+void
+operator>>(const YAML::Node& node,
+           std::unordered_map<std::string, std::shared_ptr<Channel>>& channels)
 {
   Channel ch;
   ch.chName = node["ch_name"].as<std::string>();
@@ -88,8 +103,9 @@ void operator>>(const YAML::Node& node,
 }
 
 // CommandOptions-struct assign operator
-void operator>>(const YAML::Node& node,
-                std::unordered_map<std::string, std::shared_ptr<CommandOptions>>& options)
+void operator>>(
+    const YAML::Node& node,
+    std::unordered_map<std::string, std::shared_ptr<CommandOptions>>& options)
 {
   CommandOptions cmdOpt;
   cmdOpt.optName = node["name"].as<std::string>();
@@ -117,7 +133,8 @@ void operator>>(const YAML::Node& node,
       cmdOpt.params.push_back(std::make_pair(name, type));
     }
   }
-  options.insert(std::make_pair(cmdOpt.optName, std::make_shared<CommandOptions>(cmdOpt)));
+  options.insert(
+      std::make_pair(cmdOpt.optName, std::make_shared<CommandOptions>(cmdOpt)));
 }
 
 // CommandObject insertion/creation method
@@ -208,12 +225,14 @@ void CommunicationConfig::insertSensorGroup(const YAML::Node& node)
     grp.encoding = encoding;
   // else: unkonwn encoding for grp nr xy <- should be an error/exception
   sensorGroups.insert(std::make_pair(
-      grp.grpNumber, std::make_shared<SensorGroup>(SensorGroup(grp, getSyntax()))));
+      grp.grpNumber,
+      std::make_shared<SensorGroup>(SensorGroup(grp, getSyntax()))));
 }
 
 void CommunicationConfig::readSerialInterfaceConfig()
 {
-  YAML::Node interfaceYaml = YAML::LoadFile(configPath + "serial_interface_config.yml");
+  YAML::Node interfaceYaml =
+      YAML::LoadFile(configPath + "serial_interface_config.yml");
   interfaceYaml >> serialParams;
 }
 

@@ -1,3 +1,9 @@
+/**
+ * @file "command.cpp"
+ * @brief Implementaion of the Command class.
+ *
+*/
+
 #include <pses_ucbridge/command.h>
 
 Command::Command() {}

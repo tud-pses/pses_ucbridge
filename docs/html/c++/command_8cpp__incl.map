@@ -1,4 +1,4 @@
 <map id="command.cpp" name="command.cpp">
-<area shape="rect" id="node2" href="$command_8h.html" title="pses_ucbridge/command.h" alt="" coords="354,80,533,107"/>
-<area shape="rect" id="node8" href="$parameter_8h.html" title="pses_ucbridge/parameter.h" alt="" coords="177,162,355,189"/>
+<area shape="rect" id="node2" href="$command_8h.html" title="Header file for the Command class. " alt="" coords="354,80,533,107"/>
+<area shape="rect" id="node8" href="$parameter_8h.html" title="Header file for the Parameter::Parameter, Parameter::GenericParameter and Parameter::ParameterMap cla..." alt="" coords="177,162,355,189"/>
 </map>

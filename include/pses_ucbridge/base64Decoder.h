@@ -1,7 +1,7 @@
 /**
- * @file
- * This library provides functions to convert a base64 encoded
- * value to 32bit signed/unsigned integer.
+ * @file "pses_ucbridge/base64Decoder.h"
+ * @brief This library provides functions to convert a base64 encoded value to
+ *32bit signed/unsigned integer.
  *
 */
 
@@ -118,13 +118,16 @@ inline long convertValue(const unsigned long value, const unsigned int size,
  * base64_decode("Afb/", 1, 2, 16, true).
  *
  * @param[in] in input Base64 string.
- * @param[in] startByteIndex index number (starting with zero) of the first byte of
+ * @param[in] startByteIndex index number (starting with zero) of the first byte
+ *of
  *the value that has to be read.
- * @param[in] endByteIndex index number (starting with zero) of the last byte of the
+ * @param[in] endByteIndex index number (starting with zero) of the last byte of
+ *the
  *value that has to be read.
  * @param[in] size size in bits of the value that is to be read from the decoded
  *string.
- * @param[in] isSigned whether the value from the decoded string is to be read as
+ * @param[in] isSigned whether the value from the decoded string is to be read
+ *as
  *signed or unsigned.
  * @return Decoded information as an int64.
 */

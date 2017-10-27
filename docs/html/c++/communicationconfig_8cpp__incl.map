@@ -1,8 +1,8 @@
 <map id="communicationconfig.cpp" name="communicationconfig.cpp">
-<area shape="rect" id="node2" href="$communicationconfig_8h.html" title="pses_ucbridge/communicationconfig.h" alt="" coords="511,80,755,107"/>
-<area shape="rect" id="node3" href="$command_8h.html" title="pses_ucbridge/command.h" alt="" coords="455,229,634,256"/>
-<area shape="rect" id="node14" href="$sensorgroup_8h.html" title="pses_ucbridge/sensorgroup.h" alt="" coords="614,155,806,181"/>
-<area shape="rect" id="node15" href="$syntax_8h.html" title="pses_ucbridge/syntax.h" alt="" coords="177,229,337,256"/>
-<area shape="rect" id="node9" href="$parameter_8h.html" title="pses_ucbridge/parameter.h" alt="" coords="538,311,717,338"/>
-<area shape="rect" id="node16" href="$base64Decoder_8h.html" title="pses_ucbridge/base64Decoder.h" alt="" coords="911,229,1123,256"/>
+<area shape="rect" id="node2" href="$communicationconfig_8h.html" title="Header file for the CommunicationConfig class. " alt="" coords="511,80,755,107"/>
+<area shape="rect" id="node3" href="$command_8h.html" title="Header file for the Command class. " alt="" coords="455,229,634,256"/>
+<area shape="rect" id="node14" href="$sensorgroup_8h.html" title="Header file for the SensorGroup class. " alt="" coords="614,155,806,181"/>
+<area shape="rect" id="node15" href="$syntax_8h.html" title="Header file for the Syntax struct. " alt="" coords="177,229,337,256"/>
+<area shape="rect" id="node9" href="$parameter_8h.html" title="Header file for the Parameter::Parameter, Parameter::GenericParameter and Parameter::ParameterMap cla..." alt="" coords="538,311,717,338"/>
+<area shape="rect" id="node16" href="$base64Decoder_8h.html" title="This library provides functions to convert a base64 encoded value to 32bit signed/unsigned integer..." alt="" coords="911,229,1123,256"/>
 </map>

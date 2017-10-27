@@ -1,3 +1,9 @@
+/**
+ * @file "readingthread.cpp"
+ * @brief Implementaion of the ReadingThread class.
+ *
+*/
+
 #include <pses_ucbridge/readingthread.h>
 
 ReadingThread::ReadingThread(std::shared_ptr<Syntax> syntax,

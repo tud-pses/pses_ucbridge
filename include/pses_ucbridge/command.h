@@ -1,6 +1,6 @@
 /**
- * @file
- * Header file for the Command class.
+ * @file "pses_ucbridge/command.h"
+ * @brief Header file for the Command class.
  *
 */
 
@@ -19,8 +19,8 @@
 #include <boost/algorithm/string/trim.hpp>
 
 /**
- * @struct CommandParams command.h "pses_ucbridge/command.h"
- * @brief The CommandParams struct serves as a data struct to configure
+ * @struct CommandParams command.h
+ * @brief The CommandParams class serves as a data struct to configure
  * Command objects.
  *
  * An instance of this struct is required to instantiate
@@ -44,8 +44,8 @@ struct CommandParams
 
 /**
  * @struct CommandOptions command.h "pses_ucbridge/command.h"
- * @brief The CommandOptions struct serves as a data struct to inform
- * command objects about all modifiers that can be applied to them.
+ * @brief The CommandOptions class serves as a data struct to inform
+ * Command objects about all modifiers that can be applied to them.
  *
  * A list of instance of this struct is required to instantiate
  * a Command object, this list may also be empty.
@@ -103,11 +103,11 @@ class Command
 
 public:
   /**
-   * @brief Command object default constructor.
+   * @brief Command default constructor.
   */
   Command();
   /**
-   * @brief Command object constructor.
+   * @brief Command constructor.
    * @param[in] cmdParams CommandParams struct that is used to configure a
    * Command object.
    * @param[in] cmdResponsePrefix Marks the beginning of a response.
@@ -117,6 +117,8 @@ public:
    *                             within a command template.
    * @throws std::exception
   */
+
+  ///NOTE: Zeiger auf Syntax anstelle von einzelnen symbolen !
   Command(const CommandParams& cmdParams, const std::string& cmdResponsePrefix,
           const std::unordered_map<std::string,
                                    std::shared_ptr<CommandOptions>>& options,

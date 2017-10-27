@@ -33,30 +33,43 @@
 </div><!--header-->
 <div class="contents">
 
+<p>The <a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> class builds the syntactic template for its specific command that results from the sensor group definition and parses incoming sensor group data.  
+ <a href="classSensorGroup.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac6c06207c64eec0a32d70bdc5fb39cfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSensorGroup.html#ac6c06207c64eec0a32d70bdc5fb39cfe">createSensorGroupCommand</a> (<a class="el" href="classCommand.html">Command</a> &amp;cmd, std::string &amp;command) const </td></tr>
+<tr class="memdesc:ac6c06207c64eec0a32d70bdc5fb39cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the generated sensor group command, that can be used to register this sensor group on the serial device.  <a href="#ac6c06207c64eec0a32d70bdc5fb39cfe">More...</a><br /></td></tr>
 <tr class="separator:ac6c06207c64eec0a32d70bdc5fb39cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adea2a045695d357d95176e3fc80c2b03"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:adea2a045695d357d95176e3fc80c2b03"><td class="memTemplItemLeft" align="right" valign="top">const bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classSensorGroup.html#adea2a045695d357d95176e3fc80c2b03">getChannelValue</a> (const std::string &amp;name, T &amp;value) const </td></tr>
+<tr class="memdesc:adea2a045695d357d95176e3fc80c2b03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a received value from a certain channel.  <a href="#adea2a045695d357d95176e3fc80c2b03">More...</a><br /></td></tr>
 <tr class="separator:adea2a045695d357d95176e3fc80c2b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ea8e9e916e4a4abb04bab12ef3718f"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSensorGroup.html#a08ea8e9e916e4a4abb04bab12ef3718f">getChannelValueConverted</a> (const std::string &amp;name, double &amp;value) const </td></tr>
+<tr class="memdesc:a08ea8e9e916e4a4abb04bab12ef3718f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a received converted value from a certain channel.  <a href="#a08ea8e9e916e4a4abb04bab12ef3718f">More...</a><br /></td></tr>
 <tr class="separator:a08ea8e9e916e4a4abb04bab12ef3718f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c9da8466e5350af7238766bbbc5712d"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSensorGroup.html#a1c9da8466e5350af7238766bbbc5712d">getName</a> () const </td></tr>
+<tr class="memdesc:a1c9da8466e5350af7238766bbbc5712d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of this sensor group.  <a href="#a1c9da8466e5350af7238766bbbc5712d">More...</a><br /></td></tr>
 <tr class="separator:a1c9da8466e5350af7238766bbbc5712d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4440afda9e9c014eb256cb7c04bd4b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSensorGroup.html#ad4440afda9e9c014eb256cb7c04bd4b3">processResponse</a> (const std::string &amp;response)</td></tr>
+<tr class="memdesc:ad4440afda9e9c014eb256cb7c04bd4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses an incoming sensor group message, extracts contained values and calls the registered sensor group callback.  <a href="#ad4440afda9e9c014eb256cb7c04bd4b3">More...</a><br /></td></tr>
 <tr class="separator:ad4440afda9e9c014eb256cb7c04bd4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80b31dfce58c746812c47cc1fe40a296"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSensorGroup.html#a80b31dfce58c746812c47cc1fe40a296">registerErrorCallback</a> (<a class="el" href="sensorgroup_8h.html#a76942af67b9b8fec3b6340336c6fe795">valueErrorCallbackPtr</a> <a class="el" href="classSensorGroup.html#a7e59acf7fc365a65de5bb53a3c600988">valueError</a>)</td></tr>
+<tr class="memdesc:a80b31dfce58c746812c47cc1fe40a296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a value error function pointer to handle value errors during communication.  <a href="#a80b31dfce58c746812c47cc1fe40a296">More...</a><br /></td></tr>
 <tr class="separator:a80b31dfce58c746812c47cc1fe40a296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7049c0814fa7bbef74d411e49cc2dfe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSensorGroup.html#ac7049c0814fa7bbef74d411e49cc2dfe">SensorGroup</a> ()</td></tr>
+<tr class="memdesc:ac7049c0814fa7bbef74d411e49cc2dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> default constructor.  <a href="#ac7049c0814fa7bbef74d411e49cc2dfe">More...</a><br /></td></tr>
 <tr class="separator:ac7049c0814fa7bbef74d411e49cc2dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a478dde97cdb06c525fc3066833c8a106"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSensorGroup.html#a478dde97cdb06c525fc3066833c8a106">SensorGroup</a> (const <a class="el" href="structSensorGroupParameter.html">SensorGroupParameter</a> &amp;sensorParams, std::shared_ptr&lt; <a class="el" href="structSyntax.html">Syntax</a> &gt; <a class="el" href="classSensorGroup.html#a78415563a2e9b45401c3e51d3402aa71">syntax</a>)</td></tr>
+<tr class="memdesc:a478dde97cdb06c525fc3066833c8a106"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> constructor.  <a href="#a478dde97cdb06c525fc3066833c8a106">More...</a><br /></td></tr>
 <tr class="separator:a478dde97cdb06c525fc3066833c8a106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a5d3483f5949eb290c4d39cf0939aa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSensorGroup.html#a5a5d3483f5949eb290c4d39cf0939aa0">setResponseCallback</a> (<a class="el" href="sensorgroup_8h.html#a964cde6d22e0d0a5d6c07e963c201d25">responseCallback</a> <a class="el" href="classSensorGroup.html#a3785d876741a457a752ddd7348dc060b">callbackFunction</a>)</td></tr>
+<tr class="memdesc:a5a5d3483f5949eb290c4d39cf0939aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a sensor group callback.  <a href="#a5a5d3483f5949eb290c4d39cf0939aa0">More...</a><br /></td></tr>
 <tr class="separator:a5a5d3483f5949eb290c4d39cf0939aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4c221f7fae7105a718557a173a02a7a"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSensorGroup.html#aa4c221f7fae7105a718557a173a02a7a">verifyResponseOnComand</a> (<a class="el" href="classCommand.html">Command</a> &amp;cmd, const std::string &amp;response) const </td></tr>
+<tr class="memdesc:aa4c221f7fae7105a718557a173a02a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verfy the response on a constructed set sensor group command.  <a href="#aa4c221f7fae7105a718557a173a02a7a">More...</a><br /></td></tr>
 <tr class="separator:aa4c221f7fae7105a718557a173a02a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -71,6 +84,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ad0a16b60d0db80593723ba02a7d4c7aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSensorGroup.html#ad0a16b60d0db80593723ba02a7d4c7aa">parseResponse</a> (const std::string &amp;response)</td></tr>
+<tr class="memdesc:ad0a16b60d0db80593723ba02a7d4c7aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a received sensor channel message and extract channel values, i.e. convert encoded data to "proper" data types.  <a href="#ad0a16b60d0db80593723ba02a7d4c7aa">More...</a><br /></td></tr>
 <tr class="separator:ad0a16b60d0db80593723ba02a7d4c7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -107,8 +121,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a684baea28fa60790a72cfd501abbffec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00035">35</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<div class="textblock"><p>The <a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> class builds the syntactic template for its specific command that results from the sensor group definition and parses incoming sensor group data. </p>
+<p>A <a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> object builds its command message given the required channels and channel options. It can also parse incoming sensor group data and call a registered function which decides what to do with the received data. </p>
+
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00082">82</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac7049c0814fa7bbef74d411e49cc2dfe"></a>
 <div class="memitem">
@@ -123,7 +139,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00007">7</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
+<p><a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> default constructor. </p>
+
+<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00013">13</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -151,7 +169,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00009">9</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
+<p><a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sensorParams</td><td>serves as a data struct to configure <a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> a object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">syntax</td><td><a class="el" href="structSyntax.html" title="The Syntax class serves as a data struct to provide information about important symbols for the commu...">Syntax</a> object used to detect escape sequences and other important symbols. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00015">15</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -180,7 +207,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00202">202</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
+<p>Get the generated sensor group command, that can be used to register this sensor group on the serial device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> object containing a set sensor group command </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">command</td><td>constructed set sensor group command </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00208">208</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -218,7 +254,23 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00049">49</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Get a received value from a certain channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>sensor channel name </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">returned</td><td>(unconverted) value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if channel is in sensor group, else false </dd></dl>
+
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00143">143</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -246,7 +298,23 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00217">217</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
+<p>Get a received converted value from a certain channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>sensor channel name </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">returned</td><td>converted value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if channel is in sensor group, else false </dd></dl>
+
+<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00223">223</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +331,10 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00200">200</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
+<p>Get the name of this sensor group. </p>
+<dl class="section return"><dt>Returns</dt><dd>name of this sensor group </dd></dl>
+
+<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00206">206</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +360,21 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00110">110</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
+<p>Parse a received sensor channel message and extract channel values, i.e. convert encoded data to "proper" data types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">response</td><td>posted sensor group message </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00116">116</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -307,7 +392,15 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00103">103</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
+<p>Parses an incoming sensor group message, extracts contained values and calls the registered sensor group callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">response</td><td>input sensor group message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00109">109</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +418,15 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00194">194</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
+<p>Register a value error function pointer to handle value errors during communication. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">valueError</td><td>this function decides what to do with the contents of a value error message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00200">200</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -343,7 +444,21 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00188">188</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
+<p>Register a sensor group callback. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">callbackFunction</td><td>pointer to the function that gets call whenever this sensor group object receives a message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00194">194</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +486,23 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00209">209</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
+<p>Verfy the response on a constructed set sensor group command. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> object containing a set sensor group command </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">response</td><td>response from the serial device </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if response is valid, else false </dd></dl>
+
+<p>Definition at line <a class="el" href="sensorgroup_8cpp_source.html#l00215">215</a> of file <a class="el" href="sensorgroup_8cpp_source.html">sensorgroup.cpp</a>.</p>
 
 </div>
 </div>
@@ -393,8 +524,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Sensor group message callback pointer </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00071">71</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00173">173</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -415,8 +547,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Has a group callback been registered? </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00072">72</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00174">174</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -437,8 +570,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>List of all channels in a sensor group. </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00066">66</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00168">168</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -459,8 +593,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Map of <a class="el" href="structChannel.html" title="The Channel class serves as a data struct to store sensor channel parameter. ">Channel</a> objects in this group (first: name, second <a class="el" href="structChannel.html" title="The Channel class serves as a data struct to store sensor channel parameter. ">Channel</a>) </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00067">67</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00169">169</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -481,8 +616,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p><a class="el" href="namespaceParameter.html" title="Classes in this Namespace implement dynamic type functionality. ">Parameter</a> map of received channel values </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00068">68</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00170">170</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -503,8 +639,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Set group command input parameter map </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00073">73</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00175">175</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -525,8 +662,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constant Ascii encoding indicator </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00058">58</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00160">160</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -547,8 +685,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constant b64 encoding indicator </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00059">59</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00161">161</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -569,8 +708,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constant hex encoding indicator </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00060">60</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00162">162</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -591,8 +731,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Optional semanitc descriptor of a group </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00064">64</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00166">166</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -613,8 +754,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The unique identifier of a group </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00063">63</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00165">165</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -635,8 +777,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>List of enabled options for a group </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00074">74</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00176">176</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -657,8 +800,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p><a class="el" href="namespaceParameter.html" title="Classes in this Namespace implement dynamic type functionality. ">Parameter</a> map of given option values </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00070">70</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00172">172</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -679,8 +823,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>List of parameter names for given options </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00069">69</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00171">171</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -701,8 +846,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Encoding standard of a sensor group message </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00065">65</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00167">167</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -723,8 +869,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Pointer to a <a class="el" href="structSyntax.html" title="The Syntax class serves as a data struct to provide information about important symbols for the commu...">Syntax</a> object </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00075">75</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00177">177</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -745,8 +892,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Pointer to the value error handling function </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00076">76</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00178">178</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -767,8 +915,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Has a value error callback been registered? </p>
 
-<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00077">77</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
+<p>Definition at line <a class="el" href="sensorgroup_8h_source.html#l00179">179</a> of file <a class="el" href="sensorgroup_8h_source.html">sensorgroup.h</a>.</p>
 
 </div>
 </div>
@@ -782,7 +931,7 @@ template&lt;typename T &gt; </div>
 <hr size="1"><div style="align: right;">
 <a href="https://github.com/tud-pses/pses_ucbridge">pses_ucbridge</a><br />
 Author(s): Sebastian Ehmes <sebastian.ehmes@gmx.de></br />
-<small>autogenerated on Tue Oct 24 2017 21:01:46</small>
+<small>autogenerated on Sat Oct 28 2017 00:16:49</small>
 </div>
 </body>
 </html>

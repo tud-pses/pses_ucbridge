@@ -1,3 +1,9 @@
+/**
+ * @file "sensorgroupthread.cpp"
+ * @brief Implementaion of the SensorgroupThread class.
+ *
+*/
+
 #include <pses_ucbridge/sensorgroupthread.h>
 
 SensorGroupThread::SensorGroupThread(

@@ -1,3 +1,9 @@
+/**
+ * @file "threaddispatcher.cpp"
+ * @brief Implementaion of the ThreadDispatcher class.
+ *
+*/
+
 #include <pses_ucbridge/threaddispatcher.h>
 
 ThreadDispatcher::ThreadDispatcher(const std::shared_ptr<Syntax>& syntax)

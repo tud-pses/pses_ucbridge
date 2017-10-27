@@ -1,3 +1,10 @@
+/**
+ * @file "serialinterface.cpp"
+ * @brief Implementaion of the SerialInterface class.
+ *
+*/
+
+
 #include <pses_ucbridge/serialinterface.h>
 
 SerialInterface::SerialInterface()

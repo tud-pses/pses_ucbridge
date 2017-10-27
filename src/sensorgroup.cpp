@@ -1,3 +1,9 @@
+/**
+ * @file "sensorgroup.cpp"
+ * @brief Implementaion of the SensorGroup class.
+ *
+*/
+
 #include <pses_ucbridge/sensorgroup.h>
 
 const std::string SensorGroup::ENCODING_ASCII = "ASCII";
