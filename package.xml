@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>pses_ucbridge</name>
-  <version>1.0.9</version>
+  <version>1.0.10</version>
   <description>The pses_ucbridge package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
@@ -10,12 +10,10 @@
   <maintainer email="sebastian.ehmes@gmx.de">Sebastian Ehmes</maintainer>
   <maintainer email="aceronicolas@hotmail.com">Nicolas Acero</maintainer>
 
-
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
   <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
-  <license>BSD</license>
-
+  <license>GPLv3</license>
 
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
@@ -24,13 +22,10 @@
   <url type="website">https://github.com/tud-pses/pses_ucbridge/wiki</url>
   <url>https://github.com/tud-pses/pses_ucbridge</url>
 
-
-
   <!-- Author tags are optional, multiple are allowed, one per tag -->
   <!-- Authors do not have to be maintainers, but could be -->
   <!-- Example: -->
   <author email="sebastian.ehmes@gmx.de">Sebastian Ehmes</author>
-
 
   <!-- The *_depend tags are used to specify dependencies -->
   <!-- Dependencies can be catkin packages or system dependencies -->
