@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/communication.h"
+ * @file "pses_ucbridge/Communication/communication.h"
  * @brief Header file for the Communication class.
  *
 */
@@ -8,13 +8,13 @@
 #define COMMUNICATION_H
 
 #include <string>
-#include <pses_ucbridge/threaddispatcher.h>
-#include <pses_ucbridge/serialinterface.h>
-#include <pses_ucbridge/communicationconfig.h>
-#include <pses_ucbridge/readingthread.h>
+#include <pses_ucbridge/Communication/threaddispatcher.h>
+#include <pses_ucbridge/Communication/serialinterface.h>
+#include <pses_ucbridge/Communication/communicationconfig.h>
+#include <pses_ucbridge/Communication/readingthread.h>
 #include <ros/ros.h>
-#include <pses_ucbridge/parameter.h>
-#include <pses_ucbridge/command.h>
+#include <pses_ucbridge/Communication/parameter.h>
+#include <pses_ucbridge/Communication/command.h>
 
 /**
  * @class Communication communication.h

@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/sensorgroup.h"
+ * @file "pses_ucbridge/Communication/sensorgroup.h"
  * @brief Header file for the SensorGroup class.
  *
 */
@@ -9,11 +9,11 @@
 
 #include <vector>
 #include <string>
-#include <pses_ucbridge/parameter.h>
-#include <pses_ucbridge/command.h>
-#include <pses_ucbridge/syntax.h>
+#include <pses_ucbridge/Communication/parameter.h>
+#include <pses_ucbridge/Communication/command.h>
+#include <pses_ucbridge/Communication/syntax.h>
 #include <boost/range/algorithm/remove_if.hpp>
-#include <pses_ucbridge/base64Decoder.h>
+#include <pses_ucbridge/Communication/base64Decoder.h>
 
 /**
  * @struct Channel sensorgroup.h

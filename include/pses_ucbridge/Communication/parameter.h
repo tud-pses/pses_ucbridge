@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/parameter.h"
+ * @file "pses_ucbridge/Communication/parameter.h"
  * @brief Header file for the Parameter::Parameter, Parameter::GenericParameter
  *and Parameter::ParameterMap
  *class.
@@ -200,9 +200,6 @@ public:
     ss << "List size: " << size();
     return ss.str();
   }
-
-  ///NOTE: Folgende Funktion umbauen, sodass zuerst ein leeres objekt erzeugt wird
-  /// und dann die Value setzen! -> sicherer..
 
   /**
    * @brief Insert a new parameter in this map, with the given name, type and

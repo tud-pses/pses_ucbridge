@@ -1,10 +1,10 @@
 /**
- * @file "readingthread.cpp"
+ * @file "Communication/readingthread.cpp"
  * @brief Implementaion of the ReadingThread class.
  *
 */
 
-#include <pses_ucbridge/readingthread.h>
+#include <pses_ucbridge/Communication/readingthread.h>
 
 ReadingThread::ReadingThread(std::shared_ptr<Syntax> syntax,
                              ThreadDispatcher* dispatcher)

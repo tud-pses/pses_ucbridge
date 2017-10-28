@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/syntax.h"
+ * @file "pses_ucbridge/Communication/syntax.h"
  * @brief Header file for the Syntax struct.
  *
 */

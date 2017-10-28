@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/readingthread.h"
+ * @file "pses_ucbridge/Communication/readingthread.h"
  * @brief Header file for the ReadingThread class.
  *
 */
@@ -9,13 +9,10 @@
 
 #include <string>
 #include <queue>
-#include <pses_ucbridge/communicationconfig.h>
-#include <pses_ucbridge/communicationthread.h>
-#include <pses_ucbridge/threaddispatcher.h>
+#include <pses_ucbridge/Communication/communicationconfig.h>
+#include <pses_ucbridge/Communication/communicationthread.h>
+#include <pses_ucbridge/Communication/threaddispatcher.h>
 #include <boost/range/algorithm/remove_if.hpp>
-
-///NOTE: So umbauen, dass die Kreisabhängigkeit gelöst wird zwischen den verschiedenen Threads!
-
 
 class ThreadDispatcher;
 

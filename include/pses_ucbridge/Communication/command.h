@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/command.h"
+ * @file "pses_ucbridge/Communication/command.h"
  * @brief Header file for the Command class.
  *
 */
@@ -13,7 +13,8 @@
 
 #include <utility>
 #include <vector>
-#include <pses_ucbridge/parameter.h>
+#include <pses_ucbridge/Communication/syntax.h>
+#include <pses_ucbridge/Communication/parameter.h>
 #include <boost/algorithm/string.hpp>
 #include <boost/range/algorithm/remove_if.hpp>
 #include <boost/algorithm/string/trim.hpp>
@@ -43,7 +44,7 @@ struct CommandParams
 };
 
 /**
- * @struct CommandOptions command.h "pses_ucbridge/command.h"
+ * @struct CommandOptions command.h
  * @brief The CommandOptions class serves as a data struct to inform
  * Command objects about all modifiers that can be applied to them.
  *
@@ -71,7 +72,7 @@ struct CommandOptions
 };
 
 /**
- * @class Command command.h "pses_ucbridge/command.h"
+ * @class Command command.h
  * @brief The Command class builds the syntactic template for a specific
  * command defined in a CommandParams struct.
  *
@@ -118,11 +119,9 @@ public:
    * @throws std::exception
   */
 
-  ///NOTE: Zeiger auf Syntax anstelle von einzelnen symbolen !
-  Command(const CommandParams& cmdParams, const std::string& cmdResponsePrefix,
+  Command(const CommandParams& cmdParams, const std::shared_ptr<Syntax> syntax,
           const std::unordered_map<std::string,
-                                   std::shared_ptr<CommandOptions>>& options,
-          const std::string& optionsPrefix);
+                                   std::shared_ptr<CommandOptions>>& options);
   /**
    * @brief Generates a command string from the internal template given all
    * necessary parameter values.
@@ -194,18 +193,13 @@ private:
   bool cmdHasParams;   /**< Does this Command have dynamic parameters? */
   bool cmdHasResponse; /**< Does this Command trigger a response? */
   bool respHasParams;  /**< Does the response have dynamic parameters? */
+  std::shared_ptr<Syntax> syntax; /**< Pointer to a Syntax object */
   std::unordered_map<std::string, std::shared_ptr<CommandOptions>> options; /**<
                        Map of possible options, that may modify this command.
                        (first: name, second: CommandOptions) */
-  std::string optionsPrefix; /**< This prefix marks the appearance of an option
-                                within a command template.) */
-  // first: name, second: type
   std::unordered_map<std::string, std::string> parameterTypes; /**<
                   Map of possible parameters, that may appear in this command.
                   (first: name, second: type) */
-
-  std::string
-      cmdResponsePrefix; /**< This prefix marks the beginning of a response.) */
   std::unordered_set<std::string>
       cmdParameterSet; /**< Set of possible command parameters) */
   std::vector<std::string>

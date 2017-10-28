@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/threaddispatcher.h"
+ * @file "pses_ucbridge/Communication/threaddispatcher.h"
  * @brief Header file for the ThreadDispatcher class.
  *
 */
@@ -9,11 +9,11 @@
 
 #include <string>
 #include <queue>
-#include <pses_ucbridge/serialinterface.h>
-#include <pses_ucbridge/communicationthread.h>
-#include <pses_ucbridge/readingthread.h>
-#include <pses_ucbridge/communicationconfig.h>
-#include <pses_ucbridge/sensorgroupthread.h>
+#include <pses_ucbridge/Communication/serialinterface.h>
+#include <pses_ucbridge/Communication/communicationthread.h>
+#include <pses_ucbridge/Communication/readingthread.h>
+#include <pses_ucbridge/Communication/communicationconfig.h>
+#include <pses_ucbridge/Communication/sensorgroupthread.h>
 
 class ReadingThread;
 class SensorGroupThread;

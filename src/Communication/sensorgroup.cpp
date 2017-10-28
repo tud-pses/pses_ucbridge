@@ -1,10 +1,10 @@
 /**
- * @file "sensorgroup.cpp"
+ * @file "Communication/sensorgroup.cpp"
  * @brief Implementaion of the SensorGroup class.
  *
 */
 
-#include <pses_ucbridge/sensorgroup.h>
+#include <pses_ucbridge/Communication/sensorgroup.h>
 
 const std::string SensorGroup::ENCODING_ASCII = "ASCII";
 const std::string SensorGroup::ENCODING_B64 = "B64";

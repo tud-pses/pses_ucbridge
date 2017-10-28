@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/sensorgroupthread.h"
+ * @file "pses_ucbridge/Communication/sensorgroupthread.h"
  * @brief Header file for the SensorGroupThread class.
  *
 */
@@ -9,16 +9,14 @@
 
 #include <string>
 #include <queue>
-#include <pses_ucbridge/communicationthread.h>
-#include <pses_ucbridge/threaddispatcher.h>
-#include <pses_ucbridge/sensorgroup.h>
+#include <pses_ucbridge/Communication/communicationthread.h>
+#include <pses_ucbridge/Communication/threaddispatcher.h>
+#include <pses_ucbridge/Communication/sensorgroup.h>
 #include <boost/range/algorithm/remove_if.hpp>
 #include <boost/algorithm/string/trim.hpp>
 #include <algorithm>
 
 class ThreadDispatcher;
-
-/// Note: den typedef sollte ich in die super klasse werfen -> hässlich
 
 /**
  * @typedef boost::function<void(const std::string&)>

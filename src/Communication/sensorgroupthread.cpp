@@ -1,10 +1,10 @@
 /**
- * @file "sensorgroupthread.cpp"
+ * @file "Communication/sensorgroupthread.cpp"
  * @brief Implementaion of the SensorgroupThread class.
  *
 */
 
-#include <pses_ucbridge/sensorgroupthread.h>
+#include <pses_ucbridge/Communication/sensorgroupthread.h>
 
 SensorGroupThread::SensorGroupThread(
     std::shared_ptr<Syntax> syntax, ThreadDispatcher* dispatcher,

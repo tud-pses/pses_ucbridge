@@ -1,17 +1,12 @@
 /**
- * @file "communicationconfig.cpp"
+ * @file "Communication/communicationconfig.cpp"
  * @brief Implementaion of the CommunicationConfig class.
  *
 */
 
-#include <pses_ucbridge/communicationconfig.h>
+#include <pses_ucbridge/Communication/communicationconfig.h>
 
 CommunicationConfig::CommunicationConfig() {}
-
-CommunicationConfig::CommunicationConfig(const CommunicationConfig& other)
-    : configPath(other.configPath)
-{
-}
 
 CommunicationConfig::CommunicationConfig(std::string configPath)
     : configPath(configPath)
@@ -168,8 +163,7 @@ void CommunicationConfig::insertCommand(const YAML::Node& node)
   }
   commands.insert(std::make_pair(
       cmd.name,
-      std::make_shared<Command>(Command(cmd, syntax.answerOnCmdPrefix, options,
-                                        syntax.optionsPrefix))));
+      std::make_shared<Command>(Command(cmd, getSyntax(), options))));
 }
 
 // SensorGroupObject insertion/creation method

@@ -1,24 +1,22 @@
 /**
- * @file "command.cpp"
+ * @file "Communication/command.cpp"
  * @brief Implementaion of the Command class.
  *
 */
 
-#include <pses_ucbridge/command.h>
+#include <pses_ucbridge/Communication/command.h>
 
 Command::Command() {}
 
-Command::Command(const CommandParams& cmdParams,
-                 const std::string& cmdResponsePrefix,
-                 const std::unordered_map<std::string, std::shared_ptr<CommandOptions>>& options,
-                 const std::string& optionsPrefix)
+Command::Command(const CommandParams& cmdParams, const std::shared_ptr<Syntax> syntax,
+                 const std::unordered_map<std::string,
+                                          std::shared_ptr<CommandOptions>>& options)
 {
   name = cmdParams.name;
   cmdHasParams = cmdParams.cmdHasParams;
   cmdHasResponse = cmdParams.cmdHasResponse;
   respHasParams = cmdParams.respHasParams;
-  this->cmdResponsePrefix = cmdResponsePrefix;
-  this->optionsPrefix = optionsPrefix;
+  this->syntax = syntax;
   this->options = options;
 
   parameterTypes = std::unordered_map<std::string, std::string>();
@@ -127,7 +125,7 @@ void Command::generateCommand(const Parameter::ParameterMap& inputParams,
       }
       else
       {
-        ss << " " << optionsPrefix << s1;
+        ss << " " << syntax->optionsPrefix << s1;
       }
     }
   }
@@ -140,8 +138,8 @@ const bool Command::verifyResponse(const Parameter::ParameterMap& inputParams,
 {
   // preprocessing
   std::string response = responseOrig;
-  response.erase(boost::remove_if(response, boost::is_any_of(cmdResponsePrefix +
-                                                             "\x03" + "\n")),
+  response.erase(boost::remove_if(response, boost::is_any_of(syntax->answerOnCmdPrefix +
+                                                             syntax->endOfFrame + syntax->endOfMessage)),
                  response.end());
   boost::trim(response);
   // start
@@ -216,7 +214,7 @@ const bool Command::verifyResponse(const Parameter::ParameterMap& inputParams,
   // preprocessing
   std::string response = responseOrig;
   response.erase(
-      boost::remove_if(response, boost::is_any_of(cmdResponsePrefix)),
+      boost::remove_if(response, boost::is_any_of(syntax->answerOnCmdPrefix)),
       response.end());
   boost::trim(response);
   // start

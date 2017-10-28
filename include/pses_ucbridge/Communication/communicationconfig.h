@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/communicationconfig.h"
+ * @file "pses_ucbridge/Communication/communicationconfig.h"
  * @brief Header file for the CommunicationConfig class.
  *
 */
@@ -7,8 +7,8 @@
 #ifndef COMMUNICATIONCONFIG_H
 #define COMMUNICATIONCONFIG_H
 
-#include <pses_ucbridge/command.h>
-#include <pses_ucbridge/sensorgroup.h>
+#include <pses_ucbridge/Communication/command.h>
+#include <pses_ucbridge/Communication/sensorgroup.h>
 #include <string>
 #include <unordered_map>
 #include <yaml-cpp/yaml.h>
@@ -16,11 +16,10 @@
 #include <vector>
 #include <boost/algorithm/string.hpp>
 #include <unordered_set>
-#include <pses_ucbridge/syntax.h>
+#include <pses_ucbridge/Communication/syntax.h>
 
 /**
  * @struct SerialInterfaceParams communicationconfig.h
- *"pses_ucbridge/communicationconfig.h"
  * @brief The SerialInterfaceParams class serves as a data struct to configure
  * the setup of a serial connection.
  *
@@ -53,11 +52,6 @@ public:
    * @brief CommunicationConfig default constructor.
   */
   CommunicationConfig();
-  ///NOTE: Der Copy constructor muss weg ... aua gefährlich
-  /**
-   * @brief CommunicationConfig copy constructor.
-  */
-  CommunicationConfig(const CommunicationConfig& other);
   /**
    * @brief CommunicationConfig constructor.
    * @param[in] configPath path to the config folder containing all required

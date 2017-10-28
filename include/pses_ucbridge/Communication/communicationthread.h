@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/communicationthread.h"
+ * @file "pses_ucbridge/Communication/communicationthread.h"
  * @brief Header file for the CommunicationThread class.
  *
 */
@@ -10,8 +10,6 @@
 #include <condition_variable>
 #include <mutex>
 #include <thread>
-
-///NOTE: So umbauen, dass die Kreisabhängigkeit gelöst wird zwischen den verschiedenen Threads!
 
 /**
  * @class CommunicationThread communicationthread.h

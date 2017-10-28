@@ -43,9 +43,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a754035f8852b332b1c1856aef3132fe4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicationConfig.html#a754035f8852b332b1c1856aef3132fe4">CommunicationConfig</a> ()</td></tr>
 <tr class="memdesc:a754035f8852b332b1c1856aef3132fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCommunicationConfig.html" title="The CommunicationConfig class parses config files and provides configuration parameters to a Communca...">CommunicationConfig</a> default constructor.  <a href="#a754035f8852b332b1c1856aef3132fe4">More...</a><br /></td></tr>
 <tr class="separator:a754035f8852b332b1c1856aef3132fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32ec962061f3c5950a0c6bb92085720f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicationConfig.html#a32ec962061f3c5950a0c6bb92085720f">CommunicationConfig</a> (const <a class="el" href="classCommunicationConfig.html">CommunicationConfig</a> &amp;other)</td></tr>
-<tr class="memdesc:a32ec962061f3c5950a0c6bb92085720f"><td class="mdescLeft">&#160;</td><td class="mdescRight">NOTE: Der Copy constructor muss weg ... aua gefährlich.  <a href="#a32ec962061f3c5950a0c6bb92085720f">More...</a><br /></td></tr>
-<tr class="separator:a32ec962061f3c5950a0c6bb92085720f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16d6df450626b35beb39543911322793"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommunicationConfig.html#a16d6df450626b35beb39543911322793">CommunicationConfig</a> (std::string <a class="el" href="classCommunicationConfig.html#ac8cf06809005ee670765b05d5ec915c9">configPath</a>)</td></tr>
 <tr class="memdesc:a16d6df450626b35beb39543911322793"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCommunicationConfig.html" title="The CommunicationConfig class parses config files and provides configuration parameters to a Communca...">CommunicationConfig</a> constructor.  <a href="#a16d6df450626b35beb39543911322793">More...</a><br /></td></tr>
 <tr class="separator:a16d6df450626b35beb39543911322793"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,7 +122,7 @@ Friends</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="classCommunicationConfig.html" title="The CommunicationConfig class parses config files and provides configuration parameters to a Communca...">CommunicationConfig</a> class parses config files and provides configuration parameters to a Communcation object and creates <a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> objects as well as <a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> objects. </p>
 <p>To instantiate an object of this class, a valid path to a config folder is required. The folder must contain the following files: channels.yml, command_options.yml, commands.yml, gerneral_syntax.yml, sensor_groups.yml, serial_interface_config.yml </p>
 
-<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00049">49</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00048">48</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a754035f8852b332b1c1856aef3132fe4"></a>
 <div class="memitem">
@@ -143,27 +140,6 @@ Friends</h2></td></tr>
 <p><a class="el" href="classCommunicationConfig.html" title="The CommunicationConfig class parses config files and provides configuration parameters to a Communca...">CommunicationConfig</a> default constructor. </p>
 
 <p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00009">9</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a32ec962061f3c5950a0c6bb92085720f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CommunicationConfig::CommunicationConfig </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classCommunicationConfig.html">CommunicationConfig</a> &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>NOTE: Der Copy constructor muss weg ... aua gefährlich. </p>
-<p><a class="el" href="classCommunicationConfig.html" title="The CommunicationConfig class parses config files and provides configuration parameters to a Communca...">CommunicationConfig</a> copy constructor. </p>
-
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00011">11</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -195,7 +171,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00016">16</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00011">11</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -216,7 +192,7 @@ Friends</h2></td></tr>
 <p><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> map getter. </p>
 <dl class="section return"><dt>Returns</dt><dd>a shared pointer to the <a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> map object </dd></dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00296">296</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00290">290</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -236,7 +212,7 @@ Friends</h2></td></tr>
 <p><a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> map object getter. </p>
 <dl class="section return"><dt>Returns</dt><dd>a shared pointer to the <a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> map object </dd></dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00302">302</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00296">296</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -256,7 +232,7 @@ Friends</h2></td></tr>
 <p><a class="el" href="structSerialInterfaceParams.html" title="The SerialInterfaceParams class serves as a data struct to configure the setup of a serial connection...">SerialInterfaceParams</a> object getter. </p>
 <dl class="section return"><dt>Returns</dt><dd>a shared pointer to the <a class="el" href="structSerialInterfaceParams.html" title="The SerialInterfaceParams class serves as a data struct to configure the setup of a serial connection...">SerialInterfaceParams</a> object </dd></dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00290">290</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00284">284</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -276,7 +252,7 @@ Friends</h2></td></tr>
 <p><a class="el" href="structSyntax.html" title="The Syntax class serves as a data struct to provide information about important symbols for the commu...">Syntax</a> object getter. </p>
 <dl class="section return"><dt>Returns</dt><dd>a shared pointer to the <a class="el" href="structSyntax.html" title="The Syntax class serves as a data struct to provide information about important symbols for the commu...">Syntax</a> object </dd></dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00285">285</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00279">279</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -316,7 +292,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00141">141</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00136">136</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -356,7 +332,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00176">176</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00170">170</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -389,7 +365,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00245">245</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00239">239</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -422,7 +398,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00265">265</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00259">259</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -455,7 +431,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00239">239</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00233">233</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -488,7 +464,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00255">255</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00249">249</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -521,7 +497,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00275">275</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00269">269</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -554,7 +530,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00232">232</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00226">226</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -606,7 +582,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00028">28</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00023">23</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -657,7 +633,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00077">77</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00072">72</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -708,7 +684,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00089">89</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00084">84</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -759,7 +735,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00106">106</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8cpp_source.html#l00101">101</a> of file <a class="el" href="communicationconfig_8cpp_source.html">communicationconfig.cpp</a>.</p>
 
 </div>
 </div>
@@ -783,7 +759,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p><a class="el" href="structChannel.html" title="The Channel class serves as a data struct to store sensor channel parameter. ">Channel</a> map (first: channel name, second: <a class="el" href="structChannel.html" title="The Channel class serves as a data struct to store sensor channel parameter. ">Channel</a>) </p>
 
-<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00137">137</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00131">131</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
 
 </div>
 </div>
@@ -806,7 +782,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p><a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a> map (first: command name, second: <a class="el" href="classCommand.html" title="The Command class builds the syntactic template for a specific command defined in a CommandParams str...">Command</a>) </p>
 
-<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00132">132</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00126">126</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
 
 </div>
 </div>
@@ -829,7 +805,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Path to configuration folder </p>
 
-<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00130">130</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00124">124</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
 
 </div>
 </div>
@@ -852,7 +828,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>CommandOption map (first: option name, second: <a class="el" href="structCommandOptions.html" title="The CommandOptions class serves as a data struct to inform Command objects about all modifiers that c...">CommandOptions</a>) </p>
 
-<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00139">139</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00133">133</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
 
 </div>
 </div>
@@ -875,7 +851,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p><a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a> map (first: group number, second: <a class="el" href="classSensorGroup.html" title="The SensorGroup class builds the syntactic template for its specific command that results from the se...">SensorGroup</a>) </p>
 
-<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00134">134</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00128">128</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
 
 </div>
 </div>
@@ -898,7 +874,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Serial communication parameter </p>
 
-<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00142">142</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00136">136</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
 
 </div>
 </div>
@@ -921,7 +897,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p><a class="el" href="structSyntax.html" title="The Syntax class serves as a data struct to provide information about important symbols for the commu...">Syntax</a> object </p>
 
-<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00141">141</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
+<p>Definition at line <a class="el" href="communicationconfig_8h_source.html#l00135">135</a> of file <a class="el" href="communicationconfig_8h_source.html">communicationconfig.h</a>.</p>
 
 </div>
 </div>
@@ -935,7 +911,7 @@ Friends</h2></td></tr>
 <hr size="1"><div style="align: right;">
 <a href="https://github.com/tud-pses/pses_ucbridge">pses_ucbridge</a><br />
 Author(s): Sebastian Ehmes <sebastian.ehmes@gmx.de></br />
-<small>autogenerated on Sat Oct 28 2017 00:26:02</small>
+<small>autogenerated on Sat Oct 28 2017 19:16:13</small>
 </div>
 </body>
 </html>

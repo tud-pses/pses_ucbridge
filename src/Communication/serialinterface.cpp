@@ -1,11 +1,11 @@
 /**
- * @file "serialinterface.cpp"
+ * @file "Communication/serialinterface.cpp"
  * @brief Implementaion of the SerialInterface class.
  *
 */
 
 
-#include <pses_ucbridge/serialinterface.h>
+#include <pses_ucbridge/Communication/serialinterface.h>
 
 SerialInterface::SerialInterface()
 {
@@ -109,6 +109,6 @@ void SerialInterface::findDeviceName(std::string& deviceName)
     buffer1[len] = '\0';
   }
   char buffer2[PATH_MAX + 1];
-  realpath(serialDevices.append(std::string(buffer1)).c_str(), buffer2);
+  char* rp = realpath(serialDevices.append(std::string(buffer1)).c_str(), buffer2);
   deviceName = std::string(buffer2);
 }

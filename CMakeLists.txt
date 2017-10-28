@@ -155,14 +155,14 @@ include_directories(
  #add_library(communication src/communication.cpp)
  #add_library(communicationconfig src/communicationconfig.cpp)
  add_library(project
-   src/command.cpp
-   src/readingthread.cpp
-   src/threaddispatcher.cpp
-   src/serialinterface.cpp
-   src/communication.cpp
-   src/communicationconfig.cpp
-   src/sensorgroup.cpp
-   src/sensorgroupthread.cpp
+   src/Communication/command.cpp
+   src/Communication/readingthread.cpp
+   src/Communication/threaddispatcher.cpp
+   src/Communication/serialinterface.cpp
+   src/Communication/communication.cpp
+   src/Communication/communicationconfig.cpp
+   src/Communication/sensorgroup.cpp
+   src/Communication/sensorgroupthread.cpp
   )
 
 ## Declare a C++ executable

@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/base64Decoder.h"
+ * @file "pses_ucbridge/Communication/base64Decoder.h"
  * @brief This library provides functions to convert a base64 encoded value to
  *32bit signed/unsigned integer.
  *

@@ -10,8 +10,8 @@
 #include <ros/ros.h>
 #include <signal.h>
 #include <pses_ucbridge/servicefunctions.h>
-#include <pses_ucbridge/communication.h>
-#include <pses_ucbridge/communicationconfig.h>
+#include <pses_ucbridge/Communication/communication.h>
+#include <pses_ucbridge/Communication/communicationconfig.h>
 #include <ros/package.h>
 #include <std_msgs/Float64.h>
 #include <std_msgs/UInt8.h>

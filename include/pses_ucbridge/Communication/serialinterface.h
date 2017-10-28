@@ -1,5 +1,5 @@
 /**
- * @file "pses_ucbridge/serialinterface.h"
+ * @file "pses_ucbridge/Communication/serialinterface.h"
  * @brief Header file for the SerialInterface class.
  *
 */

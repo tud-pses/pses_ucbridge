@@ -8,7 +8,7 @@
 #define SERVICEFUNCTIONS_H
 
 #include <ros/ros.h>
-#include <pses_ucbridge/communication.h>
+#include <pses_ucbridge/Communication/communication.h>
 // service includes begin
 #include <pses_ucbridge/DeleteGroup.h>
 #include <pses_ucbridge/GetControllerID.h>
